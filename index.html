@@ -4,10 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/login.style.css">
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/login.style.css" />
     <title>Login</title>
   </head>
-  <body></body>
-  <script src="./src/scripts/login.script.js">
 </html>
+  <body>
+    <main class="mainLogin">
+      <div class="leftLogin">
+        <h1 class="textTitle">KenzieHabit</h1>
+        <p class="textDescription">Bem vindo de volta!</p>
+        <p class="textDetails">
+          Para se manter conectado conosco, faça login com suas informações
+          pessoais!
+        </p>
+      </div>
+          </div>
+          <div class="rigthLogin">
+              <h1 class="textLogin">Login</h1>
+              <form class="formLogin">
+                  <div class="textField">
+                      <label for="email">Usuário</label>
+                      <input class="inputEmail" type="email" id="email"  placeholder="Digite seu usuário">
+                      <span class="messageErrorEmail"></span>
+                  </div>
+          <div class="textField">
+            <label for="password">Senha</label>
+            <input
+              class="inputPassword"
+              type="password"
+              id="password"
+              placeholder="Digite sua senha"
+            />
+          </div>
+        </form>
+        <button class="btnLogin">Entrar</button>
+      </div>
+    </main>
+    <script type="module" src="./src/scripts/login.script.js"></script>
+  </body>
+</html>
+

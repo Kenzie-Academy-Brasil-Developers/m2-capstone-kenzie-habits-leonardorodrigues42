@@ -4,10 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/homepage.style.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/homepage.style.css" />
     <title>Homepage</title>
   </head>
-  <body></body>
-  <script src="../scripts/homepage.scripts.js"
+  <body>
+    <header>
+      <h1>KenzieHabit</h1>
+      <img src="/src/assets/img/user.png" alt="" />
+    </header>
+    <section id="userInformation">
+      <img src="/src/assets/img/user.png" alt="" />
+      <h2>Username</h2>
+    </section>
+    <main>
+      <div id="tableTitle">
+        <h2>Tarefas</h2>
+        <nav>
+          <a href="">Todos</a>
+          <a href="">Concluídos</a>
+          <button>Criar</button>
+        </nav>
+      </div>
+      <section class="taskTable">
+        <div class="tableHead">
+          <h3 class="statusLabel">Status</h3>
+          <h3 class="titleLabel">Título</h3>
+          <h3 class="descLabel">Descrição</h3>
+          <h3 class="categoryLabel">Categoria</h3>
+          <h3 class="editLabel">Editar</h3>
+        </div>
+        <ul class="tableBody">
+          <li>
+            <input type="checkbox" id="3" />
+            <label for="3">Caminhar</label>
+            <p>Descrição da tarefa aqui</p>
+            <span>categoria</span>
+            <button class="editTaskButton">...</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="../scripts/homepage.scripts.js"></script>
+  </body>
 </html>
