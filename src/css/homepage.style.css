@@ -1,0 +1,250 @@
+header{
+    height: 58px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #415AF3;
+    line-height: 40px;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #415AF3;
+}
+
+#userInformation {
+    background-color: #415AF3;
+    height: 21vh;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#userInformation img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+#userInformation h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding-left: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tableTitle{
+    width: 100%;
+    max-width: 900px;
+}
+
+main h2 {
+    height: 10vh;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+main nav {
+    display: flex;
+    height: 9vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20.5px 0px 20px;
+}
+
+main nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black
+}
+
+main nav button {
+    background-color: #415AF3;
+    color: white;
+    border: none;
+    width: 90px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+main .taskTable .tableHead {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+main .taskTable .tableHead h3{
+    height: 60px;
+    color: #A1A1A1;
+}
+
+main .taskTable .tableHead .statusLabel, main .taskTable .tableHead .editLabel{
+    width: 80px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    color: #A1A1A1;
+}
+
+main .taskTable .tableHead .titleLabel{
+    width: 46.66vw;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+
+}
+
+main .taskTable .tableHead h3:first-of-type{
+    width: 80px;
+    padding-left: 20px;
+}
+
+.tableBody{
+    border-bottom: 2px solid #a1a1a159;
+}
+
+.tableBody li{
+    border-top: 2px solid #a1a1a16a;
+    width: 100vw;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tableBody li input{
+    width: 80px;
+    margin: none;
+    height: 37%;
+}
+
+.tableBody li label {
+    padding-left: 10px;
+    width: 46.66vw;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3px;
+}
+
+.tableBody li .editTaskButton {
+    width: 60px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-right: 16px;
+}
+
+.categoryLabel, .descLabel{
+    box-sizing: border-box;
+    display: none !important;
+}
+
+.tableBody li p, .tableBody li span {
+    box-sizing: border-box;
+    display: none !important;
+}
+
+@media (min-width:460px){
+    .categoryLabel, .tableBody li span{
+        display: flex !important;
+        width: 30vw;
+        align-items: center;
+    }
+
+    #tableTitle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 82px;
+    }
+
+    #tableTitle nav {
+        width:350px;
+        padding-top: 22px;
+    }
+
+    .tableBody li label{
+        box-sizing: border-box;
+        width: 40.5vw;
+        padding-left: 12px;
+    }
+
+    .titleLabel{
+        width: 40.5vw !important; 
+    }
+}
+
+@media (min-width: 700px){
+    main{
+        padding: 0px 22px;
+    }
+    .categoryLabel, .tableBody li span{
+        width: 20%;
+    }
+    .descLabel, .tableBody li p{
+        display: flex !important;
+        width: 30%;
+        align-items: center;
+    }
+    .titleLabel, .tableBody li label{
+        width: 20% !important;
+    }
+    .descLabel{
+        padding-left: 1px;
+    }
+
+    .taskTable{
+        width: 100%;
+        max-width: 900px;
+        border: 2px solid #a1a1a162;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    .tableHead{
+        width: 100% !important;
+    }
+
+    .tableBody{
+        width: 100% !important;
+        border-bottom: none;
+    }
+
+    .tableBody li{
+        width: 100%;
+    }
+
+    #tableTitle{
+        width: 100%;
+        max-width: 900px;
+    }
+}
+
