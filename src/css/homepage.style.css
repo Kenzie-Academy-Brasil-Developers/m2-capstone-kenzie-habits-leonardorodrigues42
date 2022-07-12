@@ -3,7 +3,7 @@ header{
     box-sizing: border-box;
     padding: 0px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -21,12 +21,25 @@ header img {
     border: 2px solid #415AF3;
 }
 
+.headerContainer {
+    width: 900px;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userContainer {
+    width: 900px;
+    display: flex;
+    align-items: center;
+}
+
 #userInformation {
     background-color: #415AF3;
     height: 21vh;
     padding: 0px 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -51,18 +64,19 @@ main {
 }
 
 #tableTitle{
+    
     width: 100%;
     max-width: 900px;
+
 }
 
 main h2 {
     height: 10vh;
-    padding-left: 20px;
     font-size: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
 }
 
 main nav {
@@ -70,7 +84,7 @@ main nav {
     height: 9vh;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20.5px 0px 20px;
+    padding: 0px 0px 0px 20px;
 }
 
 main nav a {
@@ -179,6 +193,7 @@ main .taskTable .tableHead h3:first-of-type{
     }
 
     #tableTitle{
+        padding: 20;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -187,7 +202,7 @@ main .taskTable .tableHead h3:first-of-type{
 
     #tableTitle nav {
         width:350px;
-        padding-top: 22px;
+        padding: 15px 0;
     }
 
     .tableBody li label{
@@ -248,3 +263,18 @@ main .taskTable .tableHead h3:first-of-type{
     }
 }
 
+@media (max-width: 700px) {
+    #tableTitle{
+        padding: 20px;
+    }
+
+    #tableTitle nav {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    #tableTitle nav {
+        padding-left: 0px;
+    }
+}
