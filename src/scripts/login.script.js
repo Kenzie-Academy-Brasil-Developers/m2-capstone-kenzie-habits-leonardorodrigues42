@@ -1,3 +1,5 @@
+import Api from "../models/Api.models.js";
+
 const formLogin = document.querySelector(".formLogin");
 const formButton = document.querySelector(".btnLogin");
 const messageErrorEmail = document.querySelector(".messageErrorEmail");
@@ -36,3 +38,11 @@ formButton.addEventListener("click", async (event) => {
 	event.preventDefault();
 	await Login.getLogin();
 });
+
+//const teste = await Api.userLogin({
+  //email: "grupo4Guilherme@mail.com",
+  //password: "a47b0998c8e0a567fec5ae036c6fda10",
+//});
+
+//console.log(teste);
+
