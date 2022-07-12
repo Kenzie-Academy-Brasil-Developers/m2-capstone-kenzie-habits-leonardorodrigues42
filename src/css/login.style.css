@@ -117,6 +117,7 @@ body {
     color: red;
     font-size: 0.9vw;
 }
+
 @media only screen and (min-width:768px){
 .mainLogin {
     flex-direction: row;
@@ -179,6 +180,10 @@ body {
 .btnLogin {
     padding: 5% 0;
     font-size: 1.5vw;
+}
+.messageErrorEmail, .messageErrorPassword {
+    color: red;
+    font-size: 0.9vw;
 }
 }
 @media only screen and (min-width:1024px){
@@ -297,5 +302,9 @@ body {
         font-weight: 600;
         font-size: 1.1vw;
         color: #FFFFFF;
+    }
+    .messageErrorEmail, .messageErrorPassword {
+        color: red;
+        font-size: 0.9vw;
     }
 }

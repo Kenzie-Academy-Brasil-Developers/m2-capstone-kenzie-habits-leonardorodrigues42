@@ -22,7 +22,7 @@ class Login {
 			inputEmail.style.border = "1.5px solid red";
 		} else if (
 			formElements[0].value !== null &&
-			response.message === "campo password orbigatório"
+			response.message === "campo password obrigatório"
 		) {
 			messageErrorPassword.innerText = "Campo Obrigatório";
 			messageErrorEmail.innerText = "";
@@ -45,4 +45,3 @@ formButton.addEventListener("click", async (event) => {
 //});
 
 //console.log(teste);
-
