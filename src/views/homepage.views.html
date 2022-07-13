@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/homepage.style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Homepage</title>
   </head>
   <body>
     <header>
-      <h1>KenzieHabit</h1>
-      <img src="/src/assets/img/user.png" alt="" />
+      <div class="headerContainer">
+        <h1>KenzieHabit</h1>
+        <img class="iconImage" src="/src/assets/img/user.png" alt="" />
+      </div>
     </header>
     <section id="userInformation">
-      <img src="/src/assets/img/user.png" alt="" />
-      <h2>Username</h2>
+      <div class="userContainer">
+        <img class="avatarImage" src="/src/assets/img/user.png" alt="" />
+        <h2 class="username">Username</h2>
+      </div>
     </section>
     <main>
       <div id="tableTitle">
@@ -23,7 +30,7 @@
         <nav>
           <a href="">Todos</a>
           <a href="">Concluídos</a>
-          <button>Criar</button>
+          <button class="buttonCreateHabit">Criar</button>
         </nav>
       </div>
       <section class="taskTable">
@@ -34,17 +41,9 @@
           <h3 class="categoryLabel">Categoria</h3>
           <h3 class="editLabel">Editar</h3>
         </div>
-        <ul class="tableBody">
-          <li>
-            <input type="checkbox" id="3" />
-            <label for="3">Caminhar</label>
-            <p>Descrição da tarefa aqui</p>
-            <span>categoria</span>
-            <button class="editTaskButton">...</button>
-          </li>
-        </ul>
+        <ul class="tableBody"></ul>
       </section>
     </main>
-    <script src="../scripts/homepage.scripts.js"></script>
+    <script type="module" src="../scripts/homepage.scripts.js"></script>
   </body>
 </html>
