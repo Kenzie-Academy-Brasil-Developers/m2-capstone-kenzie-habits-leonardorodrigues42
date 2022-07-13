@@ -12,12 +12,16 @@
   </head>
   <body>
     <header>
-      <h1>KenzieHabit</h1>
-      <img src="/src/assets/img/user.png" alt="" />
+      <div class="headerContainer">
+        <h1>KenzieHabit</h1>
+        <img class="iconImage" src="/src/assets/img/user.png" alt="" />
+      </div>
     </header>
     <section id="userInformation">
-      <img src="/src/assets/img/user.png" alt="" />
-      <h2>Username</h2>
+      <div class="userContainer">
+        <img class="avatarImage" src="/src/assets/img/user.png" alt="" />
+        <h2 class="username">Username</h2>
+      </div>
     </section>
     <main>
       <div id="tableTitle">
@@ -25,7 +29,7 @@
         <nav>
           <a href="">Todos</a>
           <a href="">Concluídos</a>
-          <button>Criar</button>
+          <button class="buttonCreateHabit">Criar</button>
         </nav>
       </div>
       <section class="taskTable">
@@ -36,15 +40,7 @@
           <h3 class="categoryLabel">Categoria</h3>
           <h3 class="editLabel">Editar</h3>
         </div>
-        <ul class="tableBody">
-          <li>
-            <input type="checkbox" id="3" />
-            <label for="3">Caminhar</label>
-            <p>Descrição da tarefa aqui</p>
-            <span>categoria</span>
-            <button class="editTaskButton">...</button>
-          </li>
-        </ul>
+        <ul class="tableBody"></ul>
       </section>
     </main>
     <script type="module" src="../scripts/homepage.scripts.js"></script>
