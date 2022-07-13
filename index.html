@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/css/login.style.css" />
     <title>Login</title>
   </head>
+</html>
   <body>
     <main class="mainLogin">
       <div class="leftLogin">
@@ -29,28 +30,17 @@
               id="email"
               placeholder="Digite seu usuário"
             />
+            <span class="messageErrorEmail"></span>
           </div>
-          <div class="rigthLogin">
-              <h1 class="textLogin">Login</h1>
-              <form class="formLogin">
                   <div class="textField">
-                      <label for="email">Usuário</label>
-                      <input class="inputEmail" type="email" id="email"  placeholder="Digite seu usuário">
-                      <span class="messageErrorEmail"></span>
+                      <label for="password">Senha</label>
+                      <input class="inputPassword" type="password" id="password" placeholder="Digite sua senha"></input>
+                      <span class="messageErrorPassword"></span>
                   </div>
-          <div class="textField">
-            <label for="password">Senha</label>
-            <input
-              class="inputPassword"
-              type="password"
-              id="password"
-              placeholder="Digite sua senha"
-            />
+              </form>
+              <button type="submit" class="btnLogin">Entrar</button>
           </div>
-        </form>
-        <button class="btnLogin">Entrar</button>
-      </div>
-    </main>
-    <script type="module" src="./src/scripts/login.script.js"></script>
-  </body>
+      </main>
+  <script type="module" src="./src/scripts/login.script.js"></script>
+ </body>
 </html>
