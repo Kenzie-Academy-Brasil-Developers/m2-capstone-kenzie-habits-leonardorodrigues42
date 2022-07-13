@@ -1,5 +1,5 @@
 export default class Api {
-  static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"));
+  static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"))
 
   static headers = {
     "Content-Type": "application/json",

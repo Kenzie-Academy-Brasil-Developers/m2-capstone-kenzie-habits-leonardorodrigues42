@@ -79,11 +79,12 @@ export default class Modal {
  
         modalTitleEditProfile.innerText = "Editar perfil"
         labelNameEditProfile.innerText = "Nome"
-        inputNameEditProfile.placeholder = "Digite seu nome"
+        inputNameEditProfile.placeholder = "Digitar nome"
         labelUrlEditProfile.innerText = "URL da imagem do perfil"
-        inputUrlEditProfile.placeholder = "Digite a URL"
-        modalBtnEditProfile.innerText = "Sim,excluir esse hábito"
+        inputUrlEditProfile.placeholder = "Digitar URL"
+        modalBtnEditProfile.innerText = "Salvar alterações"
 
+        
     }
     static editHabit() {
         const body = document.querySelector("body")
@@ -100,6 +101,11 @@ export default class Modal {
         const inputDescriptionEditHabit = document.createElement("input")
         const labelCategoryEditHabit = document.createElement("label")
         const selectCategoryEditHabit = document.createElement("select")
+        const opitionCategoryEditHabitHealth = document.createElement("option")
+        const opitionCategoryEditHabitStudies = document.createElement("option")
+        const opitionCategoryEditHabitHouse = document.createElement("option")
+        const opitionCategoryEditHabitWork = document.createElement("option")
+        const opitionCategoryEditHabitLeisure = document.createElement("option")
         const opitionCategoryEditHabit = document.createElement("option")
         const modalEditHabitContentCheck = document.createElement("div")
         const modalStatusEditHabit = document.createElement("h1")
@@ -114,7 +120,7 @@ export default class Modal {
         modalEditHabitContentTitle.append(modalTitleEditHabit, modalEditHabitBtnExit)
         modalEditHabitContentInput.append(modalFormEditHabit)
         modalFormEditHabit.append(labelNameEditHabit, inputNameEditHabit, labelUrlEditHabit, inputDescriptionEditHabit, labelCategoryEditHabit, selectCategoryEditHabit)
-        selectCategoryEditHabit.append(opitionCategoryEditHabit)
+        selectCategoryEditHabit.append(opitionCategoryEditHabit, opitionCategoryEditHabitHouse, opitionCategoryEditHabitStudies, opitionCategoryEditHabitLeisure, opitionCategoryEditHabitWork,opitionCategoryEditHabitHealth)
         modalEditHabitContentCheck.append(modalStatusEditHabit, inputCheckEditHabit)
         modalEditHabitContentBtn.append(modalBtnEditCancelHabit, modalBtnEditHabit)
 
@@ -138,15 +144,26 @@ export default class Modal {
 
         modalTitleEditHabit.innerText = "Editar hábito"
         labelNameEditHabit.innerText = "Título"
-        inputNameEditHabit.placeholder = "Digite um título"
+        inputNameEditHabit.placeholder = "Digitar título"
         labelUrlEditHabit.innerText = "Descrição"
-        inputDescriptionEditHabit.placeholder = "Digite sua descrição"
+        inputDescriptionEditHabit.placeholder = "Digitar descrição"
         labelCategoryEditHabit.innerText = "Categoria"
-        opitionCategoryEditHabit.innerText = "Selecione um categoria"
+        opitionCategoryEditHabit.innerText = "Selecionar categoria"
+        opitionCategoryEditHabitHealth.innerText = "💜 Saúde"
+        opitionCategoryEditHabitStudies.innerText = "🖊️ Estudo"
+        opitionCategoryEditHabitHouse.innerText = "🏠 Casa"
+        opitionCategoryEditHabitWork.innerText = "🔨 Trabalho"
+        opitionCategoryEditHabitLeisure.innerText = "🏖️ Lazer"
         modalStatusEditHabit.innerText = "Status"
         inputCheckEditHabit.type = "checkbox"
         modalBtnEditCancelHabit.innerText = "Excluir"
         modalBtnEditHabit.innerText = "Salvar alterações"
+
+        opitionCategoryEditHabitHealth.value = "saude"
+        opitionCategoryEditHabitStudies.value = "estudos"
+        opitionCategoryEditHabitHouse.value = "casa"
+        opitionCategoryEditHabitWork.value = "trabalho"
+        opitionCategoryEditHabitLeisure.value = "lazer"
     }
     static createHabit() {
         const body = document.querySelector("body") 
@@ -164,6 +181,11 @@ export default class Modal {
         const labelCategoryCreateHabit = document.createElement("label")
         const selectCategoryCreateHabit = document.createElement("select")
         const optionCategoryCreateHabit = document.createElement("option")
+        const opitionCategoryCreateHabitHealth = document.createElement("option")
+        const opitionCategoryCreateHabitStudies = document.createElement("option")
+        const opitionCategoryCreateHabitHouse = document.createElement("option")
+        const opitionCategoryCreateHabitWork = document.createElement("option")
+        const opitionCategoryCreateHabitLeisure = document.createElement("option")
         const modalCreateHabitContentBtn = document.createElement("div")
         const modalBtnCreateHabit = document.createElement("button")
 
@@ -173,7 +195,7 @@ export default class Modal {
         modalCreateHabitContentTitle.append(modalTitleCreateHabit,modalCreateHabitBtnExit)
         modalCreateHabitContentInput.append(modalFormCreateHabit)
         modalFormCreateHabit.append(labelNameCreatetHabit, inputNameCreateHabit, labelUrlCreateHabit, inputDescriptionCreateHabit, labelCategoryCreateHabit, selectCategoryCreateHabit)
-        selectCategoryCreateHabit.append(optionCategoryCreateHabit)
+        selectCategoryCreateHabit.append(optionCategoryCreateHabit, opitionCategoryCreateHabitHouse, opitionCategoryCreateHabitStudies, opitionCategoryCreateHabitLeisure, opitionCategoryCreateHabitWork,opitionCategoryCreateHabitHealth)
         modalCreateHabitContentBtn.append(modalBtnCreateHabit)
 
         modalCreateHabit.className = "modalCreateHabitOn"
@@ -188,14 +210,27 @@ export default class Modal {
         selectCategoryCreateHabit.className = "selectCategoryCreateHabit"
         modalCreateHabitContentBtn.className = "modalCreateHabitContentBtn"
         modalBtnCreateHabit.className = "modalBtnCreateHabit"
+
         modalTitleCreateHabit.innerText = "Criar hábito"
-        labelNameCreatetHabit.innerText = "Nome"
-        inputNameCreateHabit.placeholder = "Digite um título"
+        labelNameCreatetHabit.innerText = "Título"
+        inputNameCreateHabit.placeholder = "Digitar título"
         labelUrlCreateHabit.innerText = "URL da imagem do perfil"
-        inputDescriptionCreateHabit.placeholder = "Digite sua descrição"
+        inputDescriptionCreateHabit.placeholder = "Digitar descrição"
         labelCategoryCreateHabit.innerText = "Categoria"
-        optionCategoryCreateHabit.innerText = "Selecione um categoria"
-        modalBtnCreateHabit.innerText = "Salvar alterações"
+        optionCategoryCreateHabit.innerText = "Selecionar categoria"
+        modalBtnCreateHabit.innerText = "Inserir"
+
+        opitionCategoryCreateHabitHealth.innerText = "💜 Saúde"
+        opitionCategoryCreateHabitStudies.innerText = "🖊️ Estudo"
+        opitionCategoryCreateHabitHouse.innerText = "🏠 Casa"
+        opitionCategoryCreateHabitWork.innerText = "🔨 Trabalho"
+        opitionCategoryCreateHabitLeisure.innerText = "🏖️ Lazer"
+
+        opitionCategoryCreateHabitHealth.value = "saude"
+        opitionCategoryCreateHabitStudies.value = "estudos"
+        opitionCategoryCreateHabitHouse.value = "casa"
+        opitionCategoryCreateHabitWork.value = "trabalho"
+        opitionCategoryCreateHabitLeisure.value = "lazer"
     }
     static habitCreateSucess() {
         const body = document.querySelector("body") 
