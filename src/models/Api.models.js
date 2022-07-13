@@ -16,12 +16,12 @@ export default class Api {
       .then((res) => res.json())
       .then((response) => {
         localStorage.setItem(
-          "@kenzie-habits:userId",
-          JSON.stringify(response.userId)
-        );
-        localStorage.setItem(
           "@kenzie-habits:token",
           JSON.stringify(response.token)
+        );
+        localStorage.setItem(
+          "@kenzie-habits:user",
+          JSON.stringify(response.response)
         );
 
         return response;
@@ -44,9 +44,7 @@ export default class Api {
     return fetch("https://habits-kenzie.herokuapp.com/api/habits", {
       method: "POST",
       headers: this.headers,
-      body: {
-        body: JSON.stringify(data),
-      },
+      body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((res) => res)
