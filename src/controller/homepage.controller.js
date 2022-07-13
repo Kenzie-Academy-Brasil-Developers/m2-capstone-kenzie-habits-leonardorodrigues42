@@ -1,4 +1,5 @@
 import Api from "../models/Api.models.js";
+import Modal from "../models/modal.models.js";
 
 const responseUser = await Api.readAll();
 
@@ -21,12 +22,8 @@ export default class Homepage {
 
   static async createHabitCard() {
     this.btnCreateHabit.addEventListener("click", async () => {
-      const teste1 = {
-        habit_title: "bater ponto corretamente",
-        habit_description: "bater ponto todos os dias nos horários corretos",
-        habit_category: "Saude",
-      };
-      await Api.createHabit(teste1);
+     Modal.createHabit()
+      // await Api.createHabit(teste1);
     });
   }
 
