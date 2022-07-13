@@ -3,7 +3,7 @@ header{
     box-sizing: border-box;
     padding: 0px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -21,12 +21,25 @@ header img {
     border: 2px solid #415AF3;
 }
 
+.headerContainer {
+    width: 900px;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userContainer {
+    width: 900px;
+    display: flex;
+    align-items: center;
+}
+
 #userInformation {
     background-color: #415AF3;
     height: 21vh;
     padding: 0px 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
