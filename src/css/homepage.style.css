@@ -153,6 +153,8 @@ main .taskTable .tableHead h3:first-of-type{
     width: 80px;
     margin: none;
     height: 37%;
+    accent-color: #00a44d;
+    cursor: pointer;
 }
 
 .tableBody li label {
@@ -436,8 +438,10 @@ main .taskTable .tableHead h3:first-of-type{
     margin: 6% 0 0 0;
 }
 .inputCheckEditHabit {
-    width: 5vw;
+    width: 4vw;
+    height: 4vw;
     margin: 6% 0 0 0;
+    accent-color: #00a44d;
 }
 .modalEditHabitContentBtn {
     width: 100%;
@@ -919,6 +923,7 @@ display: none;
 }
 .inputCheckEditHabit {
     width: 3vw;
+    height: 3vh;
     margin: 6% 0 0 0;
 }
 .modalBtnEditCancelHabit {
@@ -1147,8 +1152,10 @@ display: none;
     font-size: 1vw;
     margin: 6% 0 0 0;
 }
+
 .inputCheckEditHabit {
-    width: 2vw;
+    width: 1.25vw;
+    height: 1.25vw;
     margin: 6% 0 0 0;
 }
 .modalBtnEditCancelHabit {
