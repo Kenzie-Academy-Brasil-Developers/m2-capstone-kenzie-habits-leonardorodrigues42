@@ -1,4 +1,3 @@
-
 export default class Modal {
     static delete() {
         const body = document.querySelector("body")
