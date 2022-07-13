@@ -1,7 +1,6 @@
 import Api from "../models/Api.models.js";
 
 const formLogin = document.querySelector(".formLogin");
-const formButton = document.querySelector(".btnLogin");
 const messageErrorEmail = document.querySelector(".messageErrorEmail");
 const messageErrorPassword = document.querySelector(".messageErrorPassword");
 const inputEmail = document.querySelector(".inputEmail");
@@ -33,8 +32,3 @@ export default class Login {
     }
   }
 }
-
-formButton.addEventListener("click", async (event) => {
-  event.preventDefault();
-  await Login.getLogin();
-});

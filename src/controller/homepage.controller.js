@@ -59,4 +59,3 @@ export default class Homepage {
 responseUser.map((elem) => {
   Homepage.renderHabit(elem);
 });
-
