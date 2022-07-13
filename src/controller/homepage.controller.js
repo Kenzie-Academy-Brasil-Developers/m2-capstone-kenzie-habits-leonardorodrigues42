@@ -18,13 +18,31 @@ export default class Homepage {
     this.usarname.innerText = data.usr_name;
   }
 
-  static btnCreateHabit = document.querySelector(".buttonCreateHabit");
+  static async callCreateHabitButton() {
+    const btnCreateHabit = document.querySelector(".buttonCreateHabit");
 
-  static async createHabitCard() {
-    this.btnCreateHabit.addEventListener("click", async () => {
-     Modal.createHabit()
-      // await Api.createHabit(teste1);
+    btnCreateHabit.addEventListener("click", async () => {
+      Modal.createHabit(this.createHabitCard);
     });
+  }
+
+  static async createHabitCard(event) {
+    event.preventDefault();
+
+    const objectValues = [...event.target];
+
+    console.log(objectValues);
+
+    const btnCreateHabit = document.querySelector(
+      ".modalCreateHabitContentBtn"
+    );
+
+    const objectForm = {
+      habit_title: objectValues[0].value,
+      habit_description: objectValues[1].value,
+      habit_category: objectValues[2].value,
+    };
+    console.log(objectForm);
   }
 
   static renderHabit(data) {
@@ -56,4 +74,3 @@ export default class Homepage {
 responseUser.map((elem) => {
   Homepage.renderHabit(elem);
 });
-
