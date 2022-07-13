@@ -3,7 +3,7 @@ header{
     box-sizing: border-box;
     padding: 0px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -21,25 +21,12 @@ header img {
     border: 2px solid #415AF3;
 }
 
-.headerContainer {
-    width: 900px;
-    max-width: 900px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.userContainer {
-    width: 900px;
-    display: flex;
-    align-items: center;
-}
-
 #userInformation {
     background-color: #415AF3;
     height: 21vh;
     padding: 0px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -64,19 +51,18 @@ main {
 }
 
 #tableTitle{
-    
     width: 100%;
     max-width: 900px;
-
 }
 
 main h2 {
     height: 10vh;
+    padding-left: 20px;
     font-size: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    /* margin-top: 3vh; */
+    margin-top: 3vh;
 }
 
 main nav {
@@ -84,7 +70,7 @@ main nav {
     height: 9vh;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 0px 0px 20px;
+    padding: 0px 20.5px 0px 20px;
 }
 
 main nav a {
@@ -184,7 +170,647 @@ main .taskTable .tableHead h3:first-of-type{
     box-sizing: border-box;
     display: none !important;
 }
+.modalCreateHabitOff {
+    display: none;
+}
+.modalCreateHabitOn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);  
+    inset: 0;  
+    z-index: 1; 
+    }
+.modalCreateHabitBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 5%;
+    width: 90%;
+    height: min-content;
+    background: #FFFFFF;
+    border-radius: 2%;
+    animation: bounceIn;
+    animation-duration: 0.7s;
+}
+.modalCreateHabitContentTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modalTitleCreateHabit {
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #212529;
+    padding: 3% 0;
+}
+.modalCreateHabitBtnExit {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #ADB5BD;
+    width: 5%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f1f3f500;
+    border-radius: 0.4vw;
+}
+.modalCreateHabitBtnExit:hover{
+    color: #F03839;
+}
+.modalCreateHabitContentText {
+    width: 100%;
+}
+.modalFormCreateHabit label{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    padding: 4% 0;
+}
+.inputNameCreateHabit{
+    background: #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 5% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;
+}
+.inputDescriptionCreateHabit {
+    background: #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 5% 5% 22% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;
+}
+.modalFormCreateHabit select{
+    background: #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 5% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;
+}
+.modalCreateHabitContentBtn {
+    width: 100%;
+    display: flex;
+}
+.modalBtnCreateHabit {
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    background: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5vw;
+    color: #FFFFFF;
+    margin-top: 6%;
+}
+.modalBtnCreateHabit:hover {
+    background: #4150D2;
+    border: 2px solid #4150D2;
+}
+.modalEditHabitOff {
+    display: none;
+}
+.modalEditHabitOn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalEditHabitBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 5%;
+    width: 90%;
+    height: min-content;
+    background: #FFFFFF;
+    border-radius: 2%;
+    animation: bounceIn;
+    animation-duration: 0.7s;
+}
+.modalEditHabitContentTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modalTitleEditHabit {
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #212529;
+    padding: 3% 0;
+}
+.modalEditHabitBtnExit {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #ADB5BD;
+    width: 5%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f1f3f500;
+    border-radius: 0.4vw;
+}
+.modalEditHabitBtnExit:hover{
+    color: #F03839;
+}
+.modalEditHabitContentText {
+    width: 100%;
+}
+.modalFormEditHabit label{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    padding: 4% 0;
+}
+.inputNameEditHabit{
+    background: #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 5% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;
+}
+.inputDescriptionEditHabit{
+    background: #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 2% 5% 22% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;  
+}
+.selectCategoryEditHabit {
+    background: #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 5% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;
+}
+.modalEditHabitContentCheck {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modalStatusEditHabit {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vw;
+    color: #000000;
+    margin: 6% 0 0 0;
+}
+.inputCheckEditHabit {
+    width: 5vw;
+    margin: 6% 0 0 0;
+}
+.modalEditHabitContentBtn {
+    width: 100%;
+    display: flex;
+}
+.modalBtnEditCancelHabit {
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    background: #F1F3F5;
+    border: 2px solid #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #343A40;
+    margin:  6% 1% 0 0 ;
+}
+.modalBtnEditCancelHabit:hover {
+    background: #E9ECEF;
+    border: 2px solid #E9ECEF;
+}
+.modalBtnEditHabit {
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    background: #A0ADF9;
+    border: 2px solid #A0ADF9;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #FFFFFF;
+    margin: 6% 0 0 1%;
+}
+.modalBtnEditHabit:hover {
+    background: #415AF3;
+    border: 2px solid #415AF3;
+}
+.modalEditProfileOff {
+    display: none;
+}
+.modalEditProfileOn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalEditProfileBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 5%;
+    width: 90%;
+    height: min-content;
+    background: #FFFFFF;
+    border-radius: 2%;
+    animation: bounceIn;
+    animation-duration: 0.7s;
+}
+.modalEditProfileContentTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modalTitleEditProfile {
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #212529;
+    padding: 3% 0;
+}
+.modalBtnEditProfileExit {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #ADB5BD;
+    width: 5%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f1f3f500;
+    border-radius: 0.4vw;
+}
+.modalBtnEditProfileExitModal:hover{
+    color: #F03839;
+}
+.modalEditProfileContentText {
+    width: 100%;
+}
+.modalFormEditProfile label{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    padding: 4% 0;
+}
+.modalFormEditProfile input{
+    background: #F8F9FA;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+    width: 100%;
+    border: none;
+    padding: 5% 5%;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #F1F3F5;
+}
+.modalEditProfileContentBtn {
+    width: 100%;
+    display: flex;
+}
+.modalBtnEditProfile {
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    background: #A0ADF9;
+    border: 2px solid #A0ADF9;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #FFFFFF;
+    margin: 6% 0 0 1%;
+}
+.modalBtnEditProfile:hover {
+    background: #415AF3;
+    border: 2px solid #415AF3;
+} 
+.modalDeleteOff {
+    display: none;
+}
+.modalDeleteOn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalDeleteBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 5%;
+    width: 90%;
+    height: min-content;
+    background: #FFFFFF;
+    border-radius: 2%;
+    animation: bounceIn;
+    animation-duration: 0.7s;
+}
+.modalDeleteContentTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modalTitleDelete {
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #212529;
+    padding: 3% 0;
+}
+.modalDeleteBtnExit {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6.5vw;
+    color: #ADB5BD;
+    width: 5%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f1f3f500;
+    border-radius: 0.4vw;
+}
+.modalDeleteBtnExit:hover{
+    color: #F03839;
+}
+.modalDeleteContentText {
+    width: 100%;
+}
+.modalAlertDelete {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5vw;
+    color: #000000;
+    padding: 4% 0;
+}
+.modalTextDelete {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #343A40;
+}
+.modalDeleteContentBtn {
+    width: 100%;
+    display: flex;
+}
+.modalBtnCancel {
+    width: 50%;
+    border: none;
+    padding: 2.2% 0;
+    margin: 8% 1% 0 0;
+    outline: none;
+    cursor: pointer;
+    background: #F1F3F5;
+    border: 2px solid #F1F3F5;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #343A40;
+}
+.modalBtnCancel:hover{
+    background: #E9ECEF;
+    border: 2px solid #E9ECEF;
+}
+.modalBtnDelete {
+    width: 50%;
+    border: none;
+    padding: 2.2% 0;
+    margin: 8%  0 0 1%;
+    outline: none;
+    cursor: pointer;
+    background: #E64445;
+    border: 2px solid #E64445;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #FFFFFF;
+}
+.modalChangedSucessOff {
+    display: none;
+}
+.modalChangedSucessOn {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    transform: translate(-3%, -2%);
+    background-color: rgba(0, 0, 0, 0);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalChangedSucessBox {
+        animation: fadeInRight;
+        animation-duration: 0.7s;
+}
+.modalChangedSucessImg {
+    width: 50vw;
+}
+.modalCreateSucessOff {
+display: none;
+}
+.modalCreateSucessOn {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    transform: translate(-3%, -2%);
+    background-color: rgba(0, 0, 0, 0);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalCreateSucessBox {
+        animation: fadeInRight;
+        animation-duration: 0.7s;
+}
+.modalCreateSucessImg {
+    width: 50vw;
+}
+.modalLogoutOff {
+    display: none;
+}
+.modalLogoutOn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    transform: translate(-8%,7%);
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0);  
+    inset: 0;  
+    z-index: 1; 
+    }
+.modalLogoutBox {
+    display: flex;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    width: 23%;
+    height: min-content;
+    background: #ffffff00;
+    animation: bounceIn;
+    animation-duration: 0.7s;
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+}
+.modalLogoutClip {
+    position: relative;
+    top:  1px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #ffffff;
+    width: 2vw;
+    height: 1.1vh;
+}
+.modalLogoutBtnEdit {
+    width: 100%;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    background: #ffffff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2vw;
+    color: #000000;
+    text-align:center;
+    border: none;
+    border-radius: 0.5vw 0.1vw 0 0;
+    background-image: url(../assets/img/userProfile.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: 10% 50%;
 
+}
+.modalLogoutBtnEdit:hover {
+    background:#F1F3F5 ;
+    background-image: url(../assets/img/userProfile.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnLogout {
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    background: #ffffff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2vw;
+    color: #000000;
+    text-align:center;
+    border-radius: 0 0 0.5vw 0.5vw ;
+    background-image: url(../assets/img/leaveLogout.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnLogout:hover {
+    background:#F1F3F5 ;
+    background-image: url(../assets/img/leaveLogout.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: 10% 50%;
+}
 @media (min-width:460px){
     .categoryLabel, .tableBody li span{
         display: flex !important;
@@ -193,7 +819,6 @@ main .taskTable .tableHead h3:first-of-type{
     }
 
     #tableTitle{
-        padding: 20;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -202,7 +827,7 @@ main .taskTable .tableHead h3:first-of-type{
 
     #tableTitle nav {
         width:350px;
-        padding: 15px 0;
+        padding-top: 22px;
     }
 
     .tableBody li label{
@@ -214,23 +839,204 @@ main .taskTable .tableHead h3:first-of-type{
     .titleLabel{
         width: 40.5vw !important; 
     }
+.modalCreateHabitBox {
+    padding: 5%;
+    width: 70%;
 }
-
-@media (min-width: 700px){
+.modalTitleCreateHabit {
+    font-size: 4.5vw;
+    padding: 3% 0;
+}
+.modalCreateHabitBtnExit {
+    font-size: 4.5vw;
+    width: 5%;
+}
+.modalFormCreateHabit label{
+    font-size: 2vw;
+    padding: 2% 0;
+}
+.inputNameCreateHabit{
+    font-size: 2vw;
+    padding: 2% 5%;
+}
+.inputDescriptionCreateHabit {
+    font-size: 2vw;
+    padding: 5% 5% 12% 5%;
+}
+.modalFormCreateHabit select{
+    font-size: 2vw;
+    padding: 2% 5%;
+}
+.modalBtnCreateHabit {
+    padding: 3% 0;
+    font-size: 2.3vw;
+    margin-top: 6%;
+}
+.modalEditHabitBox {
+    padding: 5%;
+    width: 70%;
+}
+.modalTitleEditHabit {
+    font-size: 4.5vw;
+    padding: 3% 0;
+}
+.modalEditHabitBtnExit {
+    font-size: 4.5vw;
+    width: 5%;
+}
+.modalFormEditHabit label{
+    font-size: 2vw;
+    padding: 2% 0;
+}
+.inputNameEditHabit{
+    font-size: 2vw;
+    padding: 2% 5%;
+}
+.inputDescriptionEditHabit{
+    font-size: 2vw;
+    padding: 5% 5% 12% 5%;
+}
+.selectCategoryEditHabit {
+    font-size: 2vw;
+    padding: 2% 5%;
+}
+.modalStatusEditHabit {
+    font-size: 2.3vw;
+    margin: 6% 0 0 0;
+}
+.inputCheckEditHabit {
+    width: 3vw;
+    margin: 6% 0 0 0;
+}
+.modalBtnEditCancelHabit {
+    padding: 3% 0;
+    font-size: 2.3vw;
+    margin:  6% 1% 0 0 ;
+}
+.modalBtnEditHabit {
+    padding: 3% 0;
+    font-size: 2.3vw;
+    margin: 6% 0 0 1%;
+}
+.modalEditProfileBox {
+    padding: 5%;
+    width: 70%;
+}
+.modalTitleEditProfile {
+    font-size: 4.5vw;
+    padding: 3% 0;
+}
+.modalBtnEditProfileExit {
+    font-size: 4.5vw;
+    width: 5%;
+}
+.modalFormEditProfile label{
+    font-size: 2vw;
+    padding: 2% 0;
+}
+.modalFormEditProfile input{
+    font-size: 2vw;
+    padding: 2% 5%;
+}
+.modalBtnEditProfile {
+    padding: 3% 0;
+    font-size: 2.3vw;
+    margin: 6% 0 0 0;
+}
+.modalDeleteBox {
+    padding: 5%;
+    width: 70%;
+}
+.modalTitleDelete {
+    font-size: 4.5vw;
+    padding: 3% 0;
+}
+.modalDeleteBtnExit {
+    font-size: 4.5vw;
+    width: 5%;
+}
+.modalAlertDelete {
+    font-size: 2vw;
+    padding: 4% 0 2% 0;
+}
+.modalTextDelete {
+    font-size: 2vw;
+    padding: 2% 0 4% 0;
+}
+.modalBtnCancel {
+    padding: 3% 0;
+    font-size: 2.3vw;
+    margin:  6% 1% 0 0 ;
+}
+.modalBtnDelete {
+    padding: 3% 0;
+    font-size: 2.3vw;
+    margin: 6% 0 0 1%;
+}
+.modalChangedSucessImg {
+    width:  30vw;
+}
+.modalCreateSucessImg {
+    width:  30vw;
+}
+.modalLogoutOn {
+    transform: translate(-4%,7%);
+    }
+.modalLogoutBox {
+    width: 20%;
+}
+.modalLogoutBtnEdit {
+    padding: 5% 0;
+    font-size: 1.9vw;
+    border-radius: 0.5vw 0.1vw 0 0;
+    background-image: url(../assets/img/userProfile.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnEdit:hover {
+    background:#F1F3F5 ;
+    background-image: url(../assets/img/userProfile.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnLogout {
+    padding: 5% 0;
+    font-size: 1.9vw;
+    border-radius: 0 0 0.5vw 0.5vw ;
+    background-image: url(../assets/img/leaveLogout.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnLogout:hover {
+    background:#F1F3F5 ;
+    background-image: url(../assets/img/leaveLogout.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: 10% 50%;
+}
+}
+@media (min-width: 769px){
     main{
         padding: 0px 22px;
     }
+
     .categoryLabel, .tableBody li span{
         width: 20%;
     }
+
     .descLabel, .tableBody li p{
         display: flex !important;
         width: 30%;
         align-items: center;
     }
+
     .titleLabel, .tableBody li label{
         width: 20% !important;
     }
+
     .descLabel{
         padding-left: 1px;
     }
@@ -261,20 +1067,212 @@ main .taskTable .tableHead h3:first-of-type{
         width: 100%;
         max-width: 900px;
     }
+.modalCreateHabitBox {
+    padding: 2%;
+    width: 32%;
+    height: min-content;
 }
-
-@media (max-width: 700px) {
-    #tableTitle{
-        padding: 20px;
-    }
-
-    #tableTitle nav {
-        padding-left: 20px;
-    }
+.modalTitleCreateHabit {
+    font-size: 1.3vw;
 }
-
-@media (max-width: 460px) {
-    #tableTitle nav {
-        padding-left: 0px;
-    }
+.modalCreateHabitBtnExit {
+    font-size: 1.4vw;
+    width: 5%;
 }
+.modalFormCreateHabit label{
+    font-size: 1vw;
+    padding: 2% 0;
+}
+.inputNameCreateHabit{
+    font-size: 1.1vw;
+    padding: 2% 5%;
+}
+.inputDescriptionCreateHabit {
+    font-size: 1.1vw;
+    width: 100%;
+    padding: 2% 5% 12% 5%;
+}
+.modalFormCreateHabit select{
+    font-size: 1.1vw;
+    color: #343A40;
+    width: 100%;
+    padding: 2% 5%;
+}
+.modalBtnCreateHabit {
+    padding: 2.2% 0;
+    font-size: 1vw;
+}
+.modalEditHabitBox {
+    padding: 2%;
+    width: 32%;
+    height: min-content;
+}
+.modalTitleEditHabit {
+    font-size: 1.3vw;
+}
+.modalEditHabitBtnExit {
+    font-size: 1.4vw;
+    width: 5%;
+}
+.modalFormEditHabit label{
+    font-size: 1vw;
+    padding: 2% 0;
+}
+.inputNameEditHabit{
+    font-size: 1.1vw;
+    padding: 2% 5%;
+}
+.inputDescriptionEditHabit{
+    font-size: 1.1vw;
+    padding: 2% 5% 12% 5%;
+}
+.selectCategoryEditHabit {
+    font-size: 1.1vw;
+    padding: 2% 5%;
+}
+.modalStatusEditHabit {
+    font-size: 1vw;
+    margin: 6% 0 0 0;
+}
+.inputCheckEditHabit {
+    width: 2vw;
+    margin: 6% 0 0 0;
+}
+.modalBtnEditCancelHabit {
+    padding: 3% 0;
+    font-size: 1vw;
+    margin:  6% 1% 0 0 ;
+}
+.modalBtnEditHabit {
+    padding: 3% 0;
+    font-size: 1vw;
+    margin: 6% 0 0 1%;
+}
+.modalEditProfileBox {
+    padding: 2%;
+    width: 32%;
+    height: min-content;
+}
+.modalTitleEditProfile {
+    font-size: 1.3vw;
+}
+.modalBtnEditProfileExit {
+    font-size: 1.4vw;
+    width: 5%;
+}
+.modalFormEditProfile label{
+    font-size: 1vw;
+    padding: 2% 0;
+}
+.modalFormEditProfile input{
+    font-size: 1.1vw;
+    padding: 2% 5%;
+}
+.modalBtnEditProfile {
+    padding: 3% 0;
+    font-size: 1vw;
+    margin: 6% 0 0 0%;
+}
+.modalDeleteBox {
+    padding: 2%;
+    width: 32%;
+    height: min-content;
+}
+.modalTitleDelete {
+    font-size: 1.3vw;
+}
+.modalDeleteBtnExit {
+    font-size: 1.4vw;
+    width: 5%;
+}
+.modalAlertDelete {
+    font-size: 1.1vw;
+    padding: 4% 0 2% 0;
+}
+.modalTextDelete {
+    font-size: 1vw;
+    padding: 2% 0 4% 0;
+}
+.modalBtnCancel {
+    padding: 3% 0;
+    font-size: 1vw;
+    margin:  6% 1% 0 0 ;
+}
+.modalBtnDelete {
+    padding: 3% 0;
+    font-size: 1vw;
+    margin: 6% 0 0 1%;
+}
+.modalChangedSucessOn {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    transform: translate(-3%, -3%);
+    background-color: rgba(0, 0, 0, 0);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalChangedSucessBox {
+        animation: fadeInRight;
+        animation-duration: 0.7s;
+}
+.modalChangedSucessImg {
+    width: 20vw;
+}
+.modalCreateSucessOn {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    transform: translate(-3%, -3%);
+    background-color: rgba(0, 0, 0, 0);  
+    inset: 0;  
+    z-index: 1; 
+}
+.modalCreateSucessBox {
+        animation: fadeInRight;
+        animation-duration: 0.7s;
+}
+.modalCreateSucessImg {
+    width: 20vw;
+} 
+.modalLogoutOn {
+    transform: translate(-1%,7%);
+    }
+.modalLogoutBox {
+    width: 10%;
+}
+.modalLogoutBtnEdit {
+    padding: 5% 0;
+    font-size: 1vw;
+    border-radius: 0.2vw 0.2vw 0 0;
+    background-image: url(../assets/img/userProfile.png);
+    background-repeat: no-repeat;
+    background-size: 1vw;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnEdit:hover {
+    background:#F1F3F5 ;
+    background-image: url(../assets/img/userProfile.png);
+    background-repeat: no-repeat;
+    background-size: 1vw;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnLogout {
+    padding: 5% 0;
+    font-size: 1vw;
+    border-radius: 0 0 0.2vw 0.2vw ;
+    background-image: url(../assets/img/leaveLogout.png);
+    background-size: 1vw;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+.modalLogoutBtnLogout:hover {
+    background:#F1F3F5 ;
+    background-image: url(../assets/img/leaveLogout.png);
+    background-repeat: no-repeat;
+    background-size: 1vw;
+    background-position: 10% 50%;
+}
+} 
