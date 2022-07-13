@@ -32,9 +32,12 @@ export default class Login {
       location.replace("./src/views/homepage.views.html");
     }
   }
+
+  static login() {
+    formButton.addEventListener("click", async (event) => {
+      event.preventDefault();
+      await Login.getLogin();
+    });
+  }
 }
 
-formButton.addEventListener("click", async (event) => {
-  event.preventDefault();
-  await Login.getLogin();
-});
