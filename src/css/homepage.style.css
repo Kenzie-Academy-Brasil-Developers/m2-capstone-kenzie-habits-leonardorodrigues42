@@ -1,7 +1,7 @@
 header{
     height: 58px;
     box-sizing: border-box;
-    padding: 0px 20px;
+    padding: 0px 22px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,9 +22,9 @@ header img {
 }
 
 .headerContainer {
-    width: 990px;
-    max-width: 990px;
     display: flex;
+    width: 100%;
+    max-width: 990px;
     justify-content: space-between;
 }
 
@@ -55,6 +55,14 @@ header img {
     font-weight: 600;
     color: white;
     padding-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.userContainer {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
 }
 
 main {
@@ -92,6 +100,12 @@ main nav a {
     font-weight: 500;
     color: black
 
+}
+
+main nav a:hover,
+main nav button,
+header img{
+    cursor: pointer;
 }
 
 main nav button {
@@ -173,6 +187,14 @@ main .taskTable .tableHead h3:first-of-type{
     padding-bottom: 3px;
 }
 
+.tableBody li span{
+    background-color:#D7E4FB;
+    color: #415AF3;
+    border-radius: 4px;
+    justify-content: center;
+    padding: 5px 0px;
+}
+
 .tableBody li .editTaskButton {
     width: 60px;
     border: none;
@@ -182,6 +204,10 @@ main .taskTable .tableHead h3:first-of-type{
     align-items: center;
     justify-content:center;
     margin-right: 16px;
+}
+
+.tableBody li .editTaskButton:hover {
+    cursor: pointer;
 }
 
 .categoryLabel, .descLabel{
