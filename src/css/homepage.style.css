@@ -1,3 +1,4 @@
+
 header{
     height: 58px;
     box-sizing: border-box;
@@ -5,6 +6,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 header h1 {
@@ -26,6 +28,8 @@ header img {
     width: 100%;
     max-width: 990px;
     justify-content: space-between;
+    animation: fadeInDownBig;
+    animation-duration: 0.4s;
 }
 
 .userContainer {
@@ -35,53 +39,45 @@ header img {
 }
 
 #userInformation {
-  background-color: #415af3;
-  height: 14vh;
-  padding: 0px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #415AF3;
+    height: 14vh;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #userInformation img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: fadeInLeft;
+    animation-duration: 1s;
 }
 
 #userInformation h2 {
-  font-size: 20px;
-  font-weight: 600;
-  color: white;
-  padding-left: 18px;
-}
-
-.userContainer {
-    display: flex;
-    width: 100%;
-    max-width: 900px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding-left: 18px;
+    animation: fadeInLeft;
+    animation-duration: 0.3s;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
 }
 
-#tableTitle {
-  width: 100%;
-  max-width: 990px;
-}
-
-main h2 {
-  height: 10vh;
-  padding-left: 20px;
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  margin-top: 3vh;
+#tableTitle{
+    width: 100%;
+    max-width: 990px;
+    
 }
 
 main nav {

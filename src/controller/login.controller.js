@@ -24,7 +24,7 @@ export default class Login {
       const formElements = [...formLogin.elements];
       const username = formElements[0].value;
       const password = formElements[1].value;
-  
+
       if (username === "") {
         event.preventDefault();
         inputEmail.style.border = "1.5px solid red";
@@ -37,14 +37,14 @@ export default class Login {
       if (password === "") {
         event.preventDefault();
         inputPassword.style.border = "1.5px solid red";
-        messageErrorPassword.innerText = "Campo obrigatório"
+        messageErrorPassword.innerText = "Campo obrigatório";
         return;
       } else {
         inputPassword.style.border = "1.5px solid blue";
         messageErrorPassword.innerText = "";
       }
       await Login.getLogin();
-      location.replace("./src/views/homepage.views.html");  
+      location.replace("./src/views/homepage.views.html");
     });
   }
 }
