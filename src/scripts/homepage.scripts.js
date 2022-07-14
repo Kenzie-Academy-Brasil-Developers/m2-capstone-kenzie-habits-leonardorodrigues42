@@ -10,9 +10,6 @@ Homepage.callCreateHabitButton();
 
 Homepage.createHabitCard();
 
-
-
-
 Homepage.setCompleteHabit()
 
 Homepage.setFilterHabitsBtn()
