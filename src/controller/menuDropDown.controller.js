@@ -37,15 +37,39 @@ export default class MenuDropDown {
                 const user = Homepage.getUser
                 
                 console.log(user.usr_name)
+                console.log(user.usr_image)
                 formElements[0].value = user.usr_name
                 formElements[1].value = user.usr_image
 
-                btnSave.addEventListener("click", async () =>{
-                    formElements = [...form.elements]
+                btnSave.addEventListener("click", async (event) =>{
+                    const inputNameEditProfile = document.querySelector(".inputNameEditProfile");
+                    const inputUrlEditProfile = document.querySelector(".inputUrlEditProfile");
+                    const inputNameEditProfileError = document.querySelector(".inputNameEditProfileError");
+                    const inputUrlEditProfileError = document.querySelector(".inputUrlEditProfileError")
+                   const formElements = [...form.elements]
                     
                     const data = {
                         usr_name: formElements[0].value,
                         usr_image: formElements[1].value
+                    }
+
+                    if (formElements[0].value === "") {
+                        event.preventDefault();
+                        inputNameEditProfile.style.border = "1.5px solid red";
+                        inputNameEditProfileError.innerText = "Campo obrigatório";
+                        return;
+                    } else {
+                        inputNameEditProfile.style.border = "1.5px solid blue";
+                        inputNameEditProfileError.innerText = "";
+                    }
+                    if (formElements[1].value === "") {
+                        event.preventDefault();
+                        inputUrlEditProfile.style.border = "1.5px solid red";
+                        inputUrlEditProfileError.innerText = "Campo obrigatório";
+                        return;
+                    } else {
+                        inputUrlEditProfile.style.border = "1.5px solid blue";
+                        inputUrlEditProfileError.innerText = "";
                     }
             
                     await Api.uptadeProfile(data)
