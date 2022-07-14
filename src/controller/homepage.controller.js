@@ -61,6 +61,7 @@ export default class Homepage {
     const btnEdit = document.createElement("button");
     const imgButton = document.createElement("button");
 
+    imgButton.id = data.habit_id;
     btnEdit.classList.add("editTaskButton");
     inputCheckbox.id = data.habit_id;
 
@@ -70,6 +71,7 @@ export default class Homepage {
         data.habit_status ?
             inputCheckbox.checked = true:
             inputCheckbox.checked = false
+
 
     labelTitle.innerText = data.habit_title;
     pDescription.innerText = data.habit_description;
@@ -100,10 +102,11 @@ export default class Homepage {
     this.ul.append(li);
   }
 
-  static dashboardDisplay = document.getElementsByClassName('tableBody')[0]
+  static dashboardDisplay = document.getElementsByClassName("tableBody")[0];
 
-  static filterHabitsBtn = document.querySelector('#filterDone')
-  static showAllBtn = document.querySelector('#filterAll') 
+  static filterHabitsBtn = document.querySelector("#filterDone");
+  static showAllBtn = document.querySelector("#filterAll");
+
 
   static async setFilterHabitsBtn(){
       this.filterHabitsBtn.addEventListener('click', async () => {
@@ -118,6 +121,7 @@ export default class Homepage {
             Homepage.renderHabit(element)
         });
       })
+
   }
 
   static async moreHabits() {
@@ -134,6 +138,7 @@ export default class Homepage {
   }
 
   static async setCompleteHabit() {
+
       [...document.querySelectorAll('.tableBody li input')].forEach(elem =>{
           elem.addEventListener('click', async () =>{
               await Api.completeHabit(elem.id)
@@ -145,12 +150,11 @@ export default class Homepage {
       }
   }
 
-
-
-
 orderedHabits.slice(0, maxHabits).map((elem) => {
   Homepage.renderHabit(elem);
 });
+
+
 Homepage.moreHabits()
 
 Homepage.showAllBtn.addEventListener('click', () =>{
@@ -161,10 +165,5 @@ Homepage.showAllBtn.addEventListener('click', () =>{
         Homepage.renderHabit(element)
   });
 
-  Homepage.setCompleteHabit()
-})
-
-
-
-
-
+  Homepage.setCompleteHabit();
+});
