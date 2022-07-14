@@ -8,18 +8,32 @@ export default class EditHabit {
     const btnEditHabit = document.querySelector(".btnTable");
 
     btnEditHabit.addEventListener("click", () => {
+      localStorage.setItem("@kenzie-habits:habit_id", btnEditHabit.id);
       Modal.editHabit();
+      console.log(btnEditHabit);
     });
   }
 
-  static async editHabitCard(event) {
-    const newObject = [...formEditHabit.elements];
+  static async editHabitCard() {
+    const modalFormEditHabit = document.querySelector(".modalFormEditHabit");
+
+    const newObject = [...modalFormEditHabit.elements];
 
     const objectForm = {
       habit_title: newObject[0].value,
       habit_description: newObject[1].value,
       habit_category: newObject[2].value,
     };
-    const response = await Api.uptadeHabit(objectForm);
+    console.log(objectForm);
+
+    const postId = localStorage.getItem("@kenzie-habits:habit_id");
+
+    const response = await Api.uptadeHabit(objectForm, postId);
+    if (response) {
+      Modal.habitChangedSucess();
+      setTimeout(() => {
+        location.reload();
+      }, 2000);
+    }
   }
 }
