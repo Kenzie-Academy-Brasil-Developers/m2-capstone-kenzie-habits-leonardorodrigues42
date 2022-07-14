@@ -208,7 +208,7 @@ main .taskTable .tableHead h3:first-of-type {
 .descLabel {
   box-sizing: border-box;
   display: none !important;
-
+}
 .tableBody li .editTaskButton:hover {
     cursor: pointer;
 }
