@@ -1,5 +1,5 @@
 export default class Api {
-  static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"))
+  static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"));
 
   static headers = {
     "Content-Type": "application/json",
@@ -14,18 +14,6 @@ export default class Api {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((response) => {
-        localStorage.setItem(
-          "@kenzie-habits:token",
-          JSON.stringify(response.token)
-        );
-        localStorage.setItem(
-          "@kenzie-habits:user",
-          JSON.stringify(response.response)
-        );
-
-        return response;
-      })
       .catch((err) => console.error(err));
   }
 
@@ -61,9 +49,9 @@ export default class Api {
       .catch((err) => console.error(err));
   }
 
-  static async readByCategory() {
+  static async readByCategory(habitId) {
     return fetch(
-      "https://habits-kenzie.herokuapp.com/api/habits/category/:habit_category",
+      `https://habits-kenzie.herokuapp.com/api/habits/category/${habitId}`,
       {
         method: "GET",
         headers: this.headers,
