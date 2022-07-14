@@ -304,6 +304,11 @@ main .taskTable .tableHead h3:first-of-type{
     box-sizing: border-box;
     border: 2px solid #F1F3F5;
 }
+
+.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+    color: red;
+    font-size: 3vw;
+}
 .inputDescriptionCreateHabit {
     background: #F1F3F5;
     border-radius: 0.4vw;
@@ -972,6 +977,10 @@ display: none;
     font-size: 2vw;
     padding: 2% 5%;
 }
+.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+    color: red;
+    font-size: 2vw;
+}
 .modalStatusEditHabit {
     font-size: 2.3vw;
     margin: 6% 0 0 0;
@@ -1189,6 +1198,10 @@ main nav {
     font-size: 1.1vw;
     width: 100%;
     padding: 2% 5% 12% 5%;
+}
+.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+    color: red;
+    font-size: 1.1vw;
 }
 .modalFormCreateHabit select{
     font-size: 1.1vw;
