@@ -36,7 +36,7 @@ header img {
 
 #userInformation {
     background-color: #415AF3;
-    height: 19vh;
+    height: 14vh;
     padding: 0px 20px;
     display: flex;
     justify-content: center;
@@ -83,7 +83,7 @@ main nav {
     height: 9vh;
     justify-content: space-between;
     align-items: center;
-   
+    padding: 22px;
 }
 
 main nav a {
@@ -91,6 +91,7 @@ main nav a {
     font-size: 16px;
     font-weight: 500;
     color: black
+
 }
 
 main nav button {
@@ -164,6 +165,13 @@ main .taskTable .tableHead h3:first-of-type{
     align-items: flex-end;
     padding-bottom: 3px;
 }
+.tableBody li label {
+    padding-left: 10px;
+    width: 46.66vw;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3px;
+}
 
 .tableBody li .editTaskButton {
     width: 60px;
@@ -185,6 +193,39 @@ main .taskTable .tableHead h3:first-of-type{
     box-sizing: border-box;
     display: none !important;
 }
+.loadMore {
+    background: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 4px;
+    align-items: center;
+    padding: 10px 28px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin: 30px 0px;
+}
+.btnTable {
+    color: #ADB5BD;
+    background-color: #ffffff00;
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5vw;
+    margin-top: 6%;
+}
+.btnTable:hover{
+    color: #ADB5BD;
+    background-color: #E9ECEF
+}
+
 
 .modalCreateHabitOn {
     position: fixed;
@@ -540,7 +581,7 @@ main .taskTable .tableHead h3:first-of-type{
     background: #f1f3f500;
     border-radius: 0.4vw;
 }
-.modalBtnEditProfileExitModal:hover{
+.modalBtnEditProfileExit:hover{
     color: #F03839;
 }
 .modalEditProfileContentText {
@@ -869,6 +910,7 @@ display: none;
     .titleLabel{
         width: 40.5vw !important; 
     }
+
 .modalCreateHabitBox {
     padding: 5%;
     width: 70%;
@@ -1062,8 +1104,13 @@ display: none;
         display: flex !important;
         width: 30%;
         align-items: center;
-    }
 
+    }
+.tableBody li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
     .titleLabel, .tableBody li label{
         width: 20% !important;
     }
@@ -1071,7 +1118,12 @@ display: none;
     .descLabel{
         padding-left: 1px;
     }
-
+main h2 {
+    padding: 0px;
+}
+main nav {
+    padding: 0px;
+}
     .taskTable{
         width: 100%;
         max-width: 990px;
@@ -1093,11 +1145,26 @@ display: none;
     .tableBody li{
         width: 100%;
     }
+.tableBody li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #415AF3;
+    padding: 3px 12px;
+    margin-right: 129px;
+    max-width: 80px;
+    background: #D7E4FB;
+    border-radius: 4px;
+}
 
     #tableTitle{
         width: 100%;
-        max-width: 900px;
+        max-width: 990px;
     }
+
 .modalCreateHabitBox {
     padding: 2%;
     width: 32%;
@@ -1271,7 +1338,7 @@ display: none;
     width: 20vw;
 } 
 .modalLogoutOn {
-    transform: translate(-1%,7%);
+    transform: translate(-17.5%,7.8%);
     }
 .modalLogoutBox {
     width: 10%;
