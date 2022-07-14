@@ -4,3 +4,7 @@ Homepage.createHabitCard();
 
 Homepage.renderUser(Homepage.getUser);
 
+Homepage.setCompleteHabit()
+
+Homepage.setFilterHabitsBtn()
+

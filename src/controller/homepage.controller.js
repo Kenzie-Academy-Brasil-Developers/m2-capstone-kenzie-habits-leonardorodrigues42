@@ -45,6 +45,9 @@ export default class Homepage {
     inputCheckbox.id = data.habit_id;
 
     inputCheckbox.type = "checkbox";
+        data.habit_status ?
+            inputCheckbox.checked = true:
+            inputCheckbox.checked = false
     labelTitle.innerText = data.habit_title;
     pDescription.innerText = data.habit_description;
     spanCategory.innerText = data.habit_category;
@@ -54,9 +57,49 @@ export default class Homepage {
     li.append(inputCheckbox, labelTitle, pDescription, spanCategory, btnEdit);
     ul.append(li);
   }
+
+  static dashboardDisplay = document.getElementsByClassName('tableBody')[0]
+
+  static filterHabitsBtn = document.querySelector('#filterDone')
+  static showAllBtn = document.querySelector('#filterAll') 
+
+  static async setFilterHabitsBtn(){
+      this.filterHabitsBtn.addEventListener('click', async () => {
+        Homepage.dashboardDisplay.innerHTML = ''
+        
+        let userHabits = await Api.readAll()
+
+        let filteredHabits = userHabits.filter(elem => {
+          return elem.habit_status === true
+        });
+
+        filteredHabits.map(element => {
+            Homepage.renderHabit(element)
+        });
+      })
+  }
+
+  static async setCompleteHabit() {
+      [...document.querySelectorAll('.tableBody li input')].forEach(elem =>{
+          elem.addEventListener('click', async () =>{
+              await Api.completeHabit(elem.id)
+          })
+      })
+    
+  }
 }
 
 responseUser.map((elem) => {
   Homepage.renderHabit(elem);
 });
+
+Homepage.showAllBtn.addEventListener('click', () =>{
+  Homepage.dashboardDisplay.innerHTML = ''
+
+  responseUser.forEach(element => {
+        Homepage.renderHabit(element)
+  });
+
+  Homepage.setCompleteHabit()
+})
 

@@ -96,6 +96,12 @@ main nav a {
     color: black
 }
 
+main nav a:hover,
+main nav button,
+header img{
+    cursor: pointer;
+}
+
 main nav button {
     background-color: #415AF3;
     color: white;
@@ -168,6 +174,14 @@ main .taskTable .tableHead h3:first-of-type{
     padding-bottom: 3px;
 }
 
+.tableBody li span{
+    background-color:#D7E4FB;
+    color: #415AF3;
+    border-radius: 4px;
+    justify-content: center;
+    padding: 5px 0px;
+}
+
 .tableBody li .editTaskButton {
     width: 60px;
     border: none;
@@ -177,6 +191,10 @@ main .taskTable .tableHead h3:first-of-type{
     align-items: center;
     justify-content:center;
     margin-right: 16px;
+}
+
+.tableBody li .editTaskButton:hover {
+    cursor: pointer;
 }
 
 .categoryLabel, .descLabel{
