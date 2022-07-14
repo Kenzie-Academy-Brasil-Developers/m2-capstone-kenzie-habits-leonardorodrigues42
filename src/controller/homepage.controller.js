@@ -46,8 +46,17 @@ export default class Homepage {
       habit_description: objectValues[1].value,
       habit_category: objectValues[2].value,
     };
-    await Api.createHabit(objectForm);
-    location.reload();
+    const response = await Api.createHabit(objectForm);
+    if (response.habit_id) {
+      Modal.habitCreateSucess().then(() => location.reload());
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: `O campo ${response.message} está vazio!`,
+        showConfirmButton: true,
+      });
+    }
   }
 
   static ul = document.querySelector(".tableBody");
@@ -65,6 +74,21 @@ export default class Homepage {
     inputCheckbox.id = data.habit_id;
 
     inputCheckbox.type = "checkbox";
+
+
+
+
+
+
+
+        data.habit_status ?
+            inputCheckbox.checked = true:
+            inputCheckbox.checked = false
+    labelTitle.innerText = data.habit_title;
+    pDescription.innerText = data.habit_description;
+    spanCategory.innerText = data.habit_category;
+    imgButton.src = "../assets/img/Button Options.png";
+
     labelTitle.innerText = data.habit_title.replace(
       /^./,
       data.habit_title[0].toUpperCase()
@@ -84,15 +108,67 @@ export default class Homepage {
       spanCategory.innerText = "Saúde";
     }
 
+
+
+
+
+
     btnEdit.appendChild(imgButton);
     li.append(inputCheckbox, labelTitle, pDescription, spanCategory, btnEdit);
     this.ul.append(li);
+  }
+
+  static dashboardDisplay = document.getElementsByClassName('tableBody')[0]
+
+  static filterHabitsBtn = document.querySelector('#filterDone')
+  static showAllBtn = document.querySelector('#filterAll') 
+
+  static async setFilterHabitsBtn(){
+      this.filterHabitsBtn.addEventListener('click', async () => {
+        Homepage.dashboardDisplay.innerHTML = ''
+        
+        let userHabits = await Api.readAll()
+
+        let filteredHabits = userHabits.filter(elem => {
+          return elem.habit_status === true
+        });
+
+        filteredHabits.map(element => {
+            Homepage.renderHabit(element)
+        });
+      })
+  }
+
+  static async setCompleteHabit() {
+      [...document.querySelectorAll('.tableBody li input')].forEach(elem =>{
+          elem.addEventListener('click', async () =>{
+              await Api.completeHabit(elem.id)
+          })
+      })
+    
   }
 }
 
 orderedHabits.slice(0, maxHabits).map((elem) => {
   Homepage.renderHabit(elem);
 });
+
+
+
+
+
+
+
+Homepage.showAllBtn.addEventListener('click', () =>{
+  Homepage.dashboardDisplay.innerHTML = ''
+
+  responseUser.forEach(element => {
+        Homepage.renderHabit(element)
+  });
+
+  Homepage.setCompleteHabit()
+})
+
 
 const btnMoreHabits = document.querySelector(".loadMore");
 
@@ -104,3 +180,4 @@ btnMoreHabits.addEventListener("click", (event) => {
     Homepage.renderHabit(elem);
   });
 });
+

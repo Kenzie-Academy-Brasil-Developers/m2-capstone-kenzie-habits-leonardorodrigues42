@@ -13,7 +13,34 @@ export default class Login {
       email: formElements[0].value,
       password: formElements[1].value,
     };
+
       await Api.userLogin(objtLogin);
+
+    const response = await Api.userLogin(objtLogin);
+
+    //Popup de erro para as requisições
+    if (response.message === "email obrigatório") {
+      messageErrorEmail.innerText = "Campo Obrigatório";
+      inputEmail.style.border = "1.5px solid red";
+    } else if (
+      formElements[0].value !== null &&
+      response.message === "campo password obrigatório"
+    ) {
+      messageErrorPassword.innerText = "Campo Obrigatório";
+      messageErrorEmail.innerText = "";
+      inputEmail.style.border = "none";
+      inputPassword.style.border = "1.5px solid red";
+    } else {
+      localStorage.setItem(
+        "@kenzie-habits:token",
+        JSON.stringify(response.token)
+      );
+      localStorage.setItem(
+        "@kenzie-habits:user",
+        JSON.stringify(response.response)
+      );
+      location.replace("./src/views/homepage.views.html");
+    }
   }
 
   static login() {
@@ -48,4 +75,3 @@ export default class Login {
     });
   }
 }
-

@@ -13,3 +13,7 @@ Homepage.createHabitCard();
 
 
 
+Homepage.setCompleteHabit()
+
+Homepage.setFilterHabitsBtn()
+
