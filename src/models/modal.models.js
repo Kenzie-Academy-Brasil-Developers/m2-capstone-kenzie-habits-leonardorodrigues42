@@ -61,6 +61,10 @@ export default class Modal {
     const modalEditProfileContentBtn = document.createElement("div");
     const modalBtnEditProfile = document.createElement("button");
 
+    modalBtnEditProfileExit.addEventListener("click", () => {
+      modalEditProfile.classList.add("modalEditProfileOff");
+    });
+
     body.append(modalEditProfile);
     modalEditProfile.append(modalEditProfileBox);
     modalEditProfileBox.append(
@@ -106,7 +110,7 @@ export default class Modal {
     inputUrlEditProfile.placeholder = "Digitar URL";
     modalBtnEditProfile.innerText = "Salvar alterações";
   }
-  static editHabit() {
+  static editHabit(callback) {
     const body = document.querySelector("body");
     const modalEditHabit = document.createElement("div");
     const modalEditHabitBox = document.createElement("div");
@@ -136,6 +140,14 @@ export default class Modal {
     const modalEditHabitContentBtn = document.createElement("div");
     const modalBtnEditCancelHabit = document.createElement("button");
     const modalBtnEditHabit = document.createElement("button");
+
+    modalFormEditHabit.addEventListener("submit", async (event) => {
+      callback(event);
+    });
+
+    modalEditHabitBtnExit.addEventListener("click", () => {
+      modalEditHabit.classList.add("modalEditHabitOff");
+    });
 
     body.append(modalEditHabit);
     modalEditHabit.append(modalEditHabitBox);
@@ -248,8 +260,9 @@ export default class Modal {
       const formElements = [...modalFormCreateHabit.elements];
       const title = formElements[0].value;
       const description = formElements[1].value;
-      const category = formElements[2].options[formElements[2].selectedIndex].value;
-      
+      const category =
+        formElements[2].options[formElements[2].selectedIndex].value;
+
       if (title === "") {
         event.preventDefault();
         inputNameCreateHabit.style.border = "1.5px solid red";
@@ -326,7 +339,8 @@ export default class Modal {
     inputNameCreateHabit.className = "inputNameCreateHabit";
     inputNameCreateHabitError.className = "inputNameCreateHabitError";
     inputDescriptionCreateHabit.className = "inputDescriptionCreateHabit";
-    inputDescriptionCreateHabitError.className = "inputDescriptionCreateHabitError";
+    inputDescriptionCreateHabitError.className =
+      "inputDescriptionCreateHabitError";
     selectCategoryCreateHabit.className = "selectCategoryCreateHabit";
     selectCategoryCreateHabitError.className = "selectCategoryCreateHabitError";
     modalBtnCreateHabit.className = "modalBtnCreateHabit";
