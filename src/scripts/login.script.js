@@ -1,8 +1,5 @@
 import Login from "../controller/login.controller.js";
 
-const formButton = document.querySelector(".btnLogin");
+Login.getLogin();
 
-formButton.addEventListener("click", async (event) => {
-    event.preventDefault();
-    await Login.getLogin();
-  });
+Login.login();
