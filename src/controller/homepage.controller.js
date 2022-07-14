@@ -9,8 +9,6 @@ const orderedHabits = responseUser.sort((a, b) => {
   return b.habit_id - a.habit_id;
 });
 
-console.log(orderedHabits);
-
 export default class Homepage {
   static getUser = JSON.parse(localStorage.getItem("@kenzie-habits:user"));
 
@@ -35,11 +33,9 @@ export default class Homepage {
   }
 
   static async createHabitCard(event) {
+    event.preventDefault();
+
     const objectValues = [...event.target];
-
-    console.log(objectValues);
-
-    const btnCreateHabit = objectValues[3];
 
     const objectForm = {
       habit_title: objectValues[0].value,
@@ -48,17 +44,12 @@ export default class Homepage {
     };
     const response = await Api.createHabit(objectForm);
     if (response.habit_id) {
-      Modal.habitCreateSucess().then(() => location.reload());
-    } else {
-      Swal.fire({
-        position: "center",
-        icon: "error",
-        title: `O campo ${response.message} está vazio!`,
-        showConfirmButton: true,
-      });
+      Modal.habitCreateSucess();
+      setTimeout(() => {
+        location.reload();
+      }, 2000);
     }
   }
-
   static ul = document.querySelector(".tableBody");
 
   static renderHabit(data) {
@@ -87,7 +78,7 @@ export default class Homepage {
       data.habit_category[0].toUpperCase()
     );
 
-    imgButton.className = "btnTable fa fa-ellipsis-h"
+    imgButton.className = "btnTable fa fa-ellipsis-h";
 
     if (data.habit_category === "saude") {
       spanCategory.innerText = "Saúde";
