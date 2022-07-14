@@ -7,11 +7,18 @@ export default class MenuDropDown {
     static iconImage = document.querySelector(".iconImage")
 
     static async viewMenu() {
-
+        
         this.iconImage.addEventListener("click", async (e) => {
+            
             Modal.logoutIsEditProfile()
-
+            
+            const selected = document.querySelector(".modalLogoutOn")
+            if (selected.classList[0] == "modalLogoutOn") {
+                
+                console.log(selected.classList[0])
+            
             const btnEdit = document.querySelector(".modalLogoutBtnEdit")
+            console.log(btnEdit)
             const btnLogout = document.querySelector(".modalLogoutBtnLogout")
             
             btnEdit.addEventListener("click", async () => {
@@ -20,9 +27,9 @@ export default class MenuDropDown {
                 const form = document.querySelector(".modalFormEditProfile")
                 const btnSave = document.querySelector(".modalBtnEditProfile")
                 const btnSair = document.querySelector(".modalBtnEditProfileExit")
-
+                
                 btnSair.addEventListener("click", () => {
-                    
+                    location.reload()
                 })
                 
                 let formElements = [...form.elements]
@@ -46,17 +53,39 @@ export default class MenuDropDown {
                     .then(() => location.reload())
                     .catch((err) => console.log(err))
                 })
+
+                this.iconImage.addEventListener("click", () => {
+                    console.log("iconImage clicked")
+                })
             })
 
             btnLogout.addEventListener("click", () => {
-                localStorage.removeItem("@kenzie-habits:user")
-                localStorage.removeItem("@kenzie-habits:token")
-
+                localStorage.clear()
+                
                 location.href = "../../index.html"
-            })
+            })}
+            else {
+                
+                selected.classList.replace("modalLogoutOn", "modalLogoutOff")
+                console.log(selected.classList[0])
+            }
+            
         })
 
+        function openCloseModal() {
+            const selected = document.querySelector(".modalLogoutOn") 
+            console.log(selected.classList[0])
+            
+            
+            
+            
+        }
+
+        
+        
     }
+
+    
 }
 
 
