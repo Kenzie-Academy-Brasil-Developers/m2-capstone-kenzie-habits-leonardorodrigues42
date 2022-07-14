@@ -13,6 +13,8 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 1vw;
+    animation: fadeInUpBig;
+    animation-duration: 0.7s;
 }
 .leftLogin {
     width: 100%;
