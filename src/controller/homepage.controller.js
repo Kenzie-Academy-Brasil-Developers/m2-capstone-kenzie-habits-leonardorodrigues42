@@ -67,14 +67,10 @@ export default class Homepage {
     inputCheckbox.type = "checkbox";
 
 
-
-
-
-
-
         data.habit_status ?
             inputCheckbox.checked = true:
             inputCheckbox.checked = false
+
     labelTitle.innerText = data.habit_title;
     pDescription.innerText = data.habit_description;
     spanCategory.innerText = data.habit_category;
@@ -99,11 +95,6 @@ export default class Homepage {
       spanCategory.innerText = "Saúde";
     }
 
-
-
-
-
-
     btnEdit.appendChild(imgButton);
     li.append(inputCheckbox, labelTitle, pDescription, spanCategory, btnEdit);
     this.ul.append(li);
@@ -117,43 +108,56 @@ export default class Homepage {
   static async setFilterHabitsBtn(){
       this.filterHabitsBtn.addEventListener('click', async () => {
         Homepage.dashboardDisplay.innerHTML = ''
-        
-        let userHabits = await Api.readAll()
 
-        let filteredHabits = userHabits.filter(elem => {
+        let filteredHabits = orderedHabits.filter(elem => {
           return elem.habit_status === true
         });
+        console.log(filteredHabits)
 
-        filteredHabits.map(element => {
+        filteredHabits.slice(0, maxHabits).map(element => {
             Homepage.renderHabit(element)
         });
       })
+  }
+
+  static async moreHabits() {
+    const btnMoreHabits = document.querySelector(".loadMore");
+
+    btnMoreHabits.addEventListener("click", (event) => {
+      event.preventDefault();
+      Homepage.ul.innerHTML = "";
+      maxHabits += 5;
+      orderedHabits.slice(0, maxHabits).map((elem) => {
+        Homepage.renderHabit(elem);
+      });
+    });
   }
 
   static async setCompleteHabit() {
       [...document.querySelectorAll('.tableBody li input')].forEach(elem =>{
           elem.addEventListener('click', async () =>{
               await Api.completeHabit(elem.id)
+              responseUser.slice(0, maxHabits).forEach(element => {
+                              Homepage.renderHabit(element)
+                            })
+            })
           })
-      })
-    
+      }
   }
-}
+
+
+
 
 orderedHabits.slice(0, maxHabits).map((elem) => {
   Homepage.renderHabit(elem);
 });
-
-
-
-
-
-
+Homepage.moreHabits()
 
 Homepage.showAllBtn.addEventListener('click', () =>{
+  console.log("dsfd")
   Homepage.dashboardDisplay.innerHTML = ''
 
-  responseUser.forEach(element => {
+  responseUser.slice(0, maxHabits).forEach(element => {
         Homepage.renderHabit(element)
   });
 
@@ -161,14 +165,6 @@ Homepage.showAllBtn.addEventListener('click', () =>{
 })
 
 
-const btnMoreHabits = document.querySelector(".loadMore");
 
-btnMoreHabits.addEventListener("click", (event) => {
-  event.preventDefault();
-  Homepage.ul.innerHTML = "";
-  maxHabits += 5;
-  orderedHabits.slice(0, maxHabits).map((elem) => {
-    Homepage.renderHabit(elem);
-  });
-});
+
 
