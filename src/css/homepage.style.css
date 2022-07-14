@@ -185,9 +185,7 @@ main .taskTable .tableHead h3:first-of-type{
     box-sizing: border-box;
     display: none !important;
 }
-.modalCreateHabitOff {
-    display: none;
-}
+
 .modalCreateHabitOn {
     position: fixed;
     display: flex;
@@ -1311,3 +1309,6 @@ display: none;
     background-position: 10% 50%;
 }
 } 
+.modalCreateHabitOff {
+    display: none;
+}
