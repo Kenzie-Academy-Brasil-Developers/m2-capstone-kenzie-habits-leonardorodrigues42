@@ -398,6 +398,22 @@ export default class Modal {
 
     modalSucessImg.src = ".././assets/img/imgHabitChangedSucess.png";
   }
+  static loginSucess() {
+    const body = document.querySelector("body");
+    const modalSucessOn = document.createElement("div");
+    const modalSucessBox = document.createElement("div");
+    const modalSucessImg = document.createElement("img");
+
+    body.append(modalSucessOn);
+    modalSucessOn.append(modalSucessBox);
+    modalSucessBox.append(modalSucessImg);
+
+    modalSucessOn.className = "modalChangedSucessOn";
+    modalSucessBox.className = "modalChangedSucessBox";
+    modalSucessImg.className = "modalChangedSucessImg";
+
+    modalSucessImg.src = ".././assets/img/imgLoginSucess.png";
+  }
   static logoutIsEditProfile() {
     const body = document.querySelector("body");
     const modalLogoutOn = document.createElement("div");
