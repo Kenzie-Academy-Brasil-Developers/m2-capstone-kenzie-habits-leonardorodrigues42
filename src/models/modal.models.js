@@ -1,3 +1,5 @@
+import EditHabit from "../controller/uptadeHabit.controller.js";
+
 export default class Modal {
   static delete() {
     const body = document.querySelector("body");
@@ -144,6 +146,11 @@ export default class Modal {
     modalFormEditHabit.addEventListener("submit", async (event) => {
       event.preventDefault();
       callback(event);
+    });
+
+    modalBtnEditHabit.addEventListener("click", async (event) => {
+      event.preventDefault();
+      await EditHabit.editHabitCard();
     });
 
     modalEditHabitBtnExit.addEventListener("click", () => {
