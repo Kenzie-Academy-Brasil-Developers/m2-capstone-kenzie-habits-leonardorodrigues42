@@ -8,17 +8,17 @@ header{
 }
 
 header h1 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #415AF3;
-    line-height: 40px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #415af3;
+  line-height: 40px;
 }
 
 header img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #415AF3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #415af3;
 }
 
 .headerContainer {
@@ -29,34 +29,32 @@ header img {
 }
 
 .userContainer {
-    width: 990px;
-    display: flex;
-    align-items: center;
+  width: 990px;
+  display: flex;
+  align-items: center;
 }
 
 #userInformation {
-    background-color: #415AF3;
-    height: 14vh;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #415af3;
+  height: 14vh;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #userInformation img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 #userInformation h2 {
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    padding-left: 18px;
-    display: flex;
-    align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  padding-left: 18px;
 }
 
 .userContainer {
@@ -66,40 +64,39 @@ header img {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#tableTitle{
-    width: 100%;
-    max-width: 990px;
+#tableTitle {
+  width: 100%;
+  max-width: 990px;
 }
 
 main h2 {
-    height: 10vh;
-    padding-left: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    margin-top: 3vh;
+  height: 10vh;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
 }
 
 main nav {
-    display: flex;
-    height: 9vh;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px;
+  display: flex;
+  height: 9vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
 }
 
 main nav a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: black
-
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
 }
 
 main nav a:hover,
@@ -109,82 +106,82 @@ header img{
 }
 
 main nav button {
-    background-color: #415AF3;
-    color: white;
-    border: none;
-    width: 90px;
-    height: 32px;
-    border-radius: 4px;
+  background-color: #415af3;
+  color: white;
+  border: none;
+  width: 90px;
+  height: 32px;
+  border-radius: 4px;
 }
 
 main .taskTable .tableHead {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 500;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-main .taskTable .tableHead h3{
-    height: 60px;
-    color: #A1A1A1;
+main .taskTable .tableHead h3 {
+  height: 60px;
+  color: #a1a1a1;
 }
 
-main .taskTable .tableHead .statusLabel, main .taskTable .tableHead .editLabel{
-    width: 80px;
-    padding-left: 12px;
-    display: flex;
-    align-items: center;
-    color: #A1A1A1;
+main .taskTable .tableHead .statusLabel,
+main .taskTable .tableHead .editLabel {
+  width: 80px;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  color: #a1a1a1;
 }
 
-main .taskTable .tableHead .titleLabel{
-    width: 46.66vw;
-    display: flex;
-    align-items: center;
-    padding-left: 12px;
-
+main .taskTable .tableHead .titleLabel {
+  width: 46.66vw;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
 }
 
-main .taskTable .tableHead h3:first-of-type{
-    width: 80px;
-    padding-left: 20px;
+main .taskTable .tableHead h3:first-of-type {
+  width: 80px;
+  padding-left: 20px;
 }
 
-.tableBody{
-    border-bottom: 2px solid #a1a1a159;
+.tableBody {
+  border-bottom: 2px solid #a1a1a159;
 }
 
-.tableBody li{
-    border-top: 2px solid #a1a1a16a;
-    width: 100vw;
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
+.tableBody li {
+  border-top: 2px solid #a1a1a16a;
+  width: 100vw;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.tableBody li input{
-    width: 80px;
-    margin: none;
-    height: 37%;
-    accent-color: #00a44d;
-    cursor: pointer;
+.tableBody li input {
+  width: 80px;
+  margin: none;
+  height: 37%;
+  accent-color: #00a44d;
+  cursor: pointer;
 }
 
 .tableBody li label {
-    padding-left: 10px;
-    width: 46.66vw;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 3px;
+  padding-left: 10px;
+  width: 46.66vw;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3px;
 }
 .tableBody li label {
-    padding-left: 10px;
-    width: 46.66vw;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 3px;
+  padding-left: 10px;
+  width: 46.66vw;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3px;
 }
 
 .tableBody li span{
@@ -196,904 +193,912 @@ main .taskTable .tableHead h3:first-of-type{
 }
 
 .tableBody li .editTaskButton {
-    width: 60px;
-    border: none;
-    background-color: white;
-    font-size: 20px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    margin-right: 16px;
+  width: 60px;
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
 }
 
+
+.categoryLabel,
+.descLabel {
+  box-sizing: border-box;
+  display: none !important;
+}
 .tableBody li .editTaskButton:hover {
     cursor: pointer;
 }
 
-.categoryLabel, .descLabel{
-    box-sizing: border-box;
-    display: none !important;
-}
-
-.tableBody li p, .tableBody li span {
-    box-sizing: border-box;
-    display: none !important;
+.tableBody li p,
+.tableBody li span {
+  box-sizing: border-box;
+  display: none !important;
 }
 .loadMore {
-    background: #415AF3;
-    border: 2px solid #415AF3;
-    border-radius: 4px;
-    align-items: center;
-    padding: 10px 28px;
-    gap: 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #FFFFFF;
-    margin: 30px 0px;
+  background: #415af3;
+  border: 2px solid #415af3;
+  border-radius: 4px;
+  align-items: center;
+  padding: 10px 28px;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin: 30px 0px;
 }
 .btnTable {
-    color: #ADB5BD;
-    background-color: #ffffff00;
-    width: 100%;
-    border: none;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3.5vw;
-    margin-top: 6%;
+  color: #adb5bd;
+  background-color: #ffffff00;
+  width: 100%;
+  border: none;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5vw;
+  margin-top: 6%;
 }
-.btnTable:hover{
-    color: #ADB5BD;
-    background-color: #E9ECEF
+.btnTable:hover {
+  color: #adb5bd;
+  background-color: #e9ecef;
 }
-
 
 .modalCreateHabitOn {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.35);  
-    inset: 0;  
-    z-index: 1; 
-    }
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  inset: 0;
+  z-index: 1;
+}
 .modalCreateHabitBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    padding: 5%;
-    width: 90%;
-    height: min-content;
-    background: #FFFFFF;
-    border-radius: 2%;
-    animation: bounceIn;
-    animation-duration: 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 5%;
+  width: 90%;
+  height: min-content;
+  background: #ffffff;
+  border-radius: 2%;
+  animation: bounceIn;
+  animation-duration: 0.7s;
 }
 .modalCreateHabitContentTitle {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .modalTitleCreateHabit {
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #212529;
-    padding: 3% 0;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #212529;
+  padding: 3% 0;
 }
 .modalCreateHabitBtnExit {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #ADB5BD;
-    width: 5%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #f1f3f500;
-    border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #adb5bd;
+  width: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f1f3f500;
+  border-radius: 0.4vw;
 }
-.modalCreateHabitBtnExit:hover{
-    color: #F03839;
+.modalCreateHabitBtnExit:hover {
+  color: #f03839;
 }
 .modalCreateHabitContentText {
-    width: 100%;
+  width: 100%;
 }
-.modalFormCreateHabit label{
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    padding: 4% 0;
+.modalFormCreateHabit label {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  padding: 4% 0;
 }
-.inputNameCreateHabit{
-    background: #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 5% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;
+.inputNameCreateHabit {
+  background: #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 5% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
 
-.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
-    color: red;
-    font-size: 3vw;
+.inputNameEditHabitError,
+.inputDescriptionEditHabitError,
+.selectCategoryEditHabitError,
+.inputNameEditProfileError,
+.inputUrlEditProfileError,
+.inputNameCreateHabitError,
+.inputDescriptionCreateHabitError,
+.selectCategoryCreateHabitError {
+  color: red;
+  font-size: 3vw;
 }
 .inputDescriptionCreateHabit {
-    background: #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 5% 5% 22% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;
+  background: #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 5% 5% 22% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
-.modalFormCreateHabit select{
-    background: #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 5% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;
+.modalFormCreateHabit select {
+  background: #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 5% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
 .modalCreateHabitContentBtn {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 .modalBtnCreateHabit {
-    width: 100%;
-    border: none;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    background: #415AF3;
-    border: 2px solid #415AF3;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3.5vw;
-    color: #FFFFFF;
-    margin-top: 6%;
+  width: 100%;
+  border: none;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  background: #415af3;
+  border: 2px solid #415af3;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5vw;
+  color: #ffffff;
+  margin-top: 6%;
 }
 .modalBtnCreateHabit:hover {
-    background: #4150D2;
-    border: 2px solid #4150D2;
-    animation: pulse;
-    animation-duration: 0.7s;
+  background: #4150d2;
+  border: 2px solid #4150d2;
+  animation: pulse;
+  animation-duration: 0.7s;
 }
-.modalEditHabitOff {
-    display: none;
-}
+
 .modalEditHabitOn {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.35);  
-    inset: 0;  
-    z-index: 1; 
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  inset: 0;
+  z-index: 1;
 }
 .modalEditHabitBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    padding: 5%;
-    width: 90%;
-    height: min-content;
-    background: #FFFFFF;
-    border-radius: 2%;
-    animation: bounceIn;
-    animation-duration: 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 5%;
+  width: 90%;
+  height: min-content;
+  background: #ffffff;
+  border-radius: 2%;
+  animation: bounceIn;
+  animation-duration: 0.7s;
 }
 .modalEditHabitContentTitle {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .modalTitleEditHabit {
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #212529;
-    padding: 3% 0;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #212529;
+  padding: 3% 0;
 }
 .modalEditHabitBtnExit {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #ADB5BD;
-    width: 5%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #f1f3f500;
-    border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #adb5bd;
+  width: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f1f3f500;
+  border-radius: 0.4vw;
 }
-.modalEditHabitBtnExit:hover{
-    color: #F03839;
+.modalEditHabitBtnExit:hover {
+  color: #f03839;
 }
 .modalEditHabitContentText {
-    width: 100%;
+  width: 100%;
 }
-.modalFormEditHabit label{
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    padding: 4% 0;
+.modalFormEditHabit label {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  padding: 4% 0;
 }
-.inputNameEditHabit{
-    background: #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 5% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;
+.inputNameEditHabit {
+  background: #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 5% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
-.inputDescriptionEditHabit{
-    background: #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 2% 5% 22% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;  
+.inputDescriptionEditHabit {
+  background: #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 2% 5% 22% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
 .selectCategoryEditHabit {
-    background: #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 5% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;
+  background: #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 5% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
 .modalEditHabitContentCheck {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .modalStatusEditHabit {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 3vw;
-    color: #000000;
-    margin: 6% 0 0 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vw;
+  color: #000000;
+  margin: 6% 0 0 0;
 }
 .inputCheckEditHabit {
-    width: 4vw;
-    height: 4vw;
-    margin: 6% 0 0 0;
-    accent-color: #00a44d;
+  width: 4vw;
+  height: 4vw;
+  margin: 6% 0 0 0;
+  accent-color: #00a44d;
 }
 .modalEditHabitContentBtn {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 .modalBtnEditCancelHabit {
-    width: 100%;
-    border: none;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    background: #F1F3F5;
-    border: 2px solid #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
-    color: #343A40;
-    margin:  6% 1% 0 0 ;
+  width: 100%;
+  border: none;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  background: #f1f3f5;
+  border: 2px solid #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  color: #343a40;
+  margin: 6% 1% 0 0;
 }
 .modalBtnEditCancelHabit:hover {
-    background: #E9ECEF;
-    border: 2px solid #E9ECEF;
-    animation: pulse;
-    animation-duration: 0.7s;
+  background: #e9ecef;
+  border: 2px solid #e9ecef;
+  animation: pulse;
+  animation-duration: 0.7s;
 }
 .modalBtnEditHabit {
-    width: 100%;
-    border: none;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    background: #A0ADF9;
-    border: 2px solid #A0ADF9;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
-    color: #FFFFFF;
-    margin: 6% 0 0 1%;
+  width: 100%;
+  border: none;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  background: #a0adf9;
+  border: 2px solid #a0adf9;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  color: #ffffff;
+  margin: 6% 0 0 1%;
 }
 .modalBtnEditHabit:hover {
-    background: #415AF3;
-    border: 2px solid #415AF3;
-    animation: pulse;
-    animation-duration: 0.7s;
+  background: #415af3;
+  border: 2px solid #415af3;
+  animation: pulse;
+  animation-duration: 0.7s;
 }
-.modalEditProfileOff {
-    display: none;
-}
+
 .modalEditProfileOn {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.35);  
-    inset: 0;  
-    z-index: 1; 
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  inset: 0;
+  z-index: 1;
 }
 .modalEditProfileBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    padding: 5%;
-    width: 90%;
-    height: min-content;
-    background: #FFFFFF;
-    border-radius: 2%;
-    animation: bounceIn;
-    animation-duration: 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 5%;
+  width: 90%;
+  height: min-content;
+  background: #ffffff;
+  border-radius: 2%;
+  animation: bounceIn;
+  animation-duration: 0.7s;
 }
 .modalEditProfileContentTitle {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .modalTitleEditProfile {
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #212529;
-    padding: 3% 0;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #212529;
+  padding: 3% 0;
 }
 .modalBtnEditProfileExit {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #ADB5BD;
-    width: 5%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #f1f3f500;
-    border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #adb5bd;
+  width: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f1f3f500;
+  border-radius: 0.4vw;
 }
-.modalBtnEditProfileExit:hover{
-    color: #F03839;
+.modalBtnEditProfileExit:hover {
+  color: #f03839;
 }
 .modalEditProfileContentText {
-    width: 100%;
+  width: 100%;
 }
-.modalFormEditProfile label{
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    padding: 4% 0;
+.modalFormEditProfile label {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  padding: 4% 0;
 }
-.modalFormEditProfile input{
-    background: #F8F9FA;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
-    width: 100%;
-    border: none;
-    padding: 5% 5%;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #F1F3F5;
+.modalFormEditProfile input {
+  background: #f8f9fa;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
+  width: 100%;
+  border: none;
+  padding: 5% 5%;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid #f1f3f5;
 }
 .modalEditProfileContentBtn {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 .modalBtnEditProfile {
-    width: 100%;
-    border: none;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    background: #A0ADF9;
-    border: 2px solid #A0ADF9;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
-    color: #FFFFFF;
-    margin: 6% 0 0 1%;
+  width: 100%;
+  border: none;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  background: #a0adf9;
+  border: 2px solid #a0adf9;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  color: #ffffff;
+  margin: 6% 0 0 1%;
 }
 .modalBtnEditProfile:hover {
-    background: #415AF3;
-    border: 2px solid #415AF3;
-    animation: pulse;
-    animation-duration: 0.7s;
-} 
+  background: #415af3;
+  border: 2px solid #415af3;
+  animation: pulse;
+  animation-duration: 0.7s;
+}
 .modalDeleteOff {
-    display: none;
+  display: none;
 }
 .modalDeleteOn {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.35);  
-    inset: 0;  
-    z-index: 1; 
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  inset: 0;
+  z-index: 1;
 }
 .modalDeleteBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    padding: 5%;
-    width: 90%;
-    height: min-content;
-    background: #FFFFFF;
-    border-radius: 2%;
-    animation: bounceIn;
-    animation-duration: 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 5%;
+  width: 90%;
+  height: min-content;
+  background: #ffffff;
+  border-radius: 2%;
+  animation: bounceIn;
+  animation-duration: 0.7s;
 }
 .modalDeleteContentTitle {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .modalTitleDelete {
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #212529;
-    padding: 3% 0;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #212529;
+  padding: 3% 0;
 }
 .modalDeleteBtnExit {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 6.5vw;
-    color: #ADB5BD;
-    width: 5%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #f1f3f500;
-    border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6.5vw;
+  color: #adb5bd;
+  width: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f1f3f500;
+  border-radius: 0.4vw;
 }
-.modalDeleteBtnExit:hover{
-    color: #F03839;
+.modalDeleteBtnExit:hover {
+  color: #f03839;
 }
 .modalDeleteContentText {
-    width: 100%;
+  width: 100%;
 }
 .modalAlertDelete {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3.5vw;
-    color: #000000;
-    padding: 4% 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5vw;
+  color: #000000;
+  padding: 4% 0;
 }
 .modalTextDelete {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vw;
-    color: #343A40;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #343a40;
 }
 .modalDeleteContentBtn {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 .modalBtnCancel {
-    width: 50%;
-    border: none;
-    padding: 2.2% 0;
-    margin: 8% 1% 0 0;
-    outline: none;
-    cursor: pointer;
-    background: #F1F3F5;
-    border: 2px solid #F1F3F5;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
-    color: #343A40;
+  width: 50%;
+  border: none;
+  padding: 2.2% 0;
+  margin: 8% 1% 0 0;
+  outline: none;
+  cursor: pointer;
+  background: #f1f3f5;
+  border: 2px solid #f1f3f5;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  color: #343a40;
 }
-.modalBtnCancel:hover{
-    background: #E9ECEF;
-    border: 2px solid #E9ECEF;
-    animation: pulse;
-    animation-duration: 0.7s;
+.modalBtnCancel:hover {
+  background: #e9ecef;
+  border: 2px solid #e9ecef;
+  animation: pulse;
+  animation-duration: 0.7s;
 }
 .modalBtnDelete {
-    width: 50%;
-    border: none;
-    padding: 2.2% 0;
-    margin: 8%  0 0 1%;
-    outline: none;
-    cursor: pointer;
-    background: #E64445;
-    border: 2px solid #E64445;
-    border-radius: 0.4vw;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
-    color: #FFFFFF;
+  width: 50%;
+  border: none;
+  padding: 2.2% 0;
+  margin: 8% 0 0 1%;
+  outline: none;
+  cursor: pointer;
+  background: #e64445;
+  border: 2px solid #e64445;
+  border-radius: 0.4vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  color: #ffffff;
 }
-.modalBtnDelete:hover{
-    background-color: #F03839;
-    animation: pulse;
-    animation-duration: 0.7s;
+.modalBtnDelete:hover {
+  background-color: #f03839;
+  animation: pulse;
+  animation-duration: 0.7s;
 }
 .modalChangedSucessOff {
-    display: none;
+  display: none;
 }
 .modalChangedSucessOn {
-    position: fixed;
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    transform: translate(-3%, -2%);
-    background-color: rgba(0, 0, 0, 0);  
-    inset: 0;  
-    z-index: 1; 
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  transform: translate(-3%, -2%);
+  background-color: rgba(0, 0, 0, 0);
+  inset: 0;
+  z-index: 1;
 }
 .modalChangedSucessBox {
-        animation: fadeInRight;
-        animation-duration: 0.7s;
+  animation: fadeInRight;
+  animation-duration: 0.7s;
 }
 .modalChangedSucessImg {
-    width: 50vw;
+  width: 50vw;
 }
 .modalCreateSucessOff {
-display: none;
+  display: none;
 }
 .modalCreateSucessOn {
-    position: fixed;
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    transform: translate(-3%, -2%);
-    background-color: rgba(0, 0, 0, 0);  
-    inset: 0;  
-    z-index: 1; 
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  transform: translate(-3%, -2%);
+  background-color: rgba(0, 0, 0, 0);
+  inset: 0;
+  z-index: 1;
 }
 .modalCreateSucessBox {
-        animation: fadeInRight;
-        animation-duration: 0.7s;
+  animation: fadeInRight;
+  animation-duration: 0.7s;
 }
 .modalCreateSucessImg {
-    width: 50vw;
-}
-.modalLogoutOff {
-    display: none;
+  width: 50vw;
 }
 .modalLogoutOn {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    align-items: flex-start;
-    justify-content: end;
-    transform: translate(-8%,7%);
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0);  
-    inset: 0;  
-    z-index: 1; 
-    }
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
+  transform: translate(-8%, 7%);
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  inset: 0;
+  z-index: 1;
+}
 .modalLogoutBox {
-    display: flex;
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
-    flex-direction: column;
-    position: absolute;
-    width: 23%;
-    height: min-content;
-    background: #ffffff00;
-    animation: bounceIn;
-    animation-duration: 0.7s;
-    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  flex-direction: column;
+  position: absolute;
+  width: 23%;
+  height: min-content;
+  background: #ffffff00;
+  animation: bounceIn;
+  animation-duration: 0.7s;
+  box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
 }
 .modalLogoutClip {
-    position: relative;
-    top:  1px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: #ffffff;
-    width: 2vw;
-    height: 1.1vh;
+  position: relative;
+  top: 1px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: #ffffff;
+  width: 2vw;
+  height: 1.1vh;
 }
 .modalLogoutBtnEdit {
-    width: 100%;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    background: #ffffff;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2vw;
-    color: #000000;
-    text-align:center;
-    border: none;
-    border-radius: 0.5vw 0.1vw 0 0;
-    background-image: url(../assets/img/userProfile.png);
-    background-repeat: no-repeat;
-    background-size: 2vw;
-    background-position: 10% 50%;
-
+  width: 100%;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  background: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vw;
+  color: #000000;
+  text-align: center;
+  border: none;
+  border-radius: 0.5vw 0.1vw 0 0;
+  background-image: url(../assets/img/userProfile.png);
+  background-repeat: no-repeat;
+  background-size: 2vw;
+  background-position: 10% 50%;
 }
 .modalLogoutBtnEdit:hover {
-    background:#F1F3F5 ;
-    background-image: url(../assets/img/userProfile.png);
-    background-repeat: no-repeat;
-    background-size: 2vw;
-    background-position: 10% 50%;
+  background: #f1f3f5;
+  background-image: url(../assets/img/userProfile.png);
+  background-repeat: no-repeat;
+  background-size: 2vw;
+  background-position: 10% 50%;
 }
 .modalLogoutBtnLogout {
-    width: 100%;
-    border: none;
-    padding: 5% 0;
-    outline: none;
-    cursor: pointer;
-    background: #ffffff;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2vw;
-    color: #000000;
-    text-align:center;
-    border-radius: 0 0 0.5vw 0.5vw ;
-    background-image: url(../assets/img/leaveLogout.png);
-    background-size: 2vw;
-    background-repeat: no-repeat;
-    background-position: 10% 50%;
+  width: 100%;
+  border: none;
+  padding: 5% 0;
+  outline: none;
+  cursor: pointer;
+  background: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vw;
+  color: #000000;
+  text-align: center;
+  border-radius: 0 0 0.5vw 0.5vw;
+  background-image: url(../assets/img/leaveLogout.png);
+  background-size: 2vw;
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
 }
 .modalLogoutBtnLogout:hover {
-    background:#F1F3F5 ;
-    background-image: url(../assets/img/leaveLogout.png);
-    background-repeat: no-repeat;
-    background-size: 2vw;
-    background-position: 10% 50%;
+  background: #f1f3f5;
+  background-image: url(../assets/img/leaveLogout.png);
+  background-repeat: no-repeat;
+  background-size: 2vw;
+  background-position: 10% 50%;
 }
-@media (min-width:460px){
-    .categoryLabel, .tableBody li span{
-        display: flex !important;
-        width: 30vw;
-        align-items: center;
-    }
+@media (min-width: 460px) {
+  .categoryLabel,
+  .tableBody li span {
+    display: flex !important;
+    width: 30vw;
+    align-items: center;
+  }
 
-    #tableTitle{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 82px;
-    }
+  #tableTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+  }
 
-    #tableTitle nav {
-        width:350px;
-        padding-top: 22px;
-    }
+  #tableTitle nav {
+    width: 350px;
+    padding-top: 22px;
+  }
 
-    .tableBody li label{
-        box-sizing: border-box;
-        width: 40.5vw;
-        padding-left: 12px;
-    }
+  .tableBody li label {
+    box-sizing: border-box;
+    width: 40.5vw;
+    padding-left: 12px;
+  }
 
-    .titleLabel{
-        width: 40.5vw !important; 
-    }
+  .titleLabel {
+    width: 40.5vw !important;
+  }
 
-.modalCreateHabitBox {
+  .modalCreateHabitBox {
     padding: 5%;
     width: 70%;
-}
-.modalTitleCreateHabit {
+  }
+  .modalTitleCreateHabit {
     font-size: 4.5vw;
     padding: 3% 0;
-}
-.modalCreateHabitBtnExit {
+  }
+  .modalCreateHabitBtnExit {
     font-size: 4.5vw;
     width: 5%;
-}
-.modalFormCreateHabit label{
+  }
+  .modalFormCreateHabit label {
     font-size: 2vw;
     padding: 2% 0;
-}
-.inputNameCreateHabit{
+  }
+  .inputNameCreateHabit {
     font-size: 2vw;
     padding: 2% 5%;
-}
-.inputDescriptionCreateHabit {
+  }
+  .inputDescriptionCreateHabit {
     font-size: 2vw;
     padding: 5% 5% 12% 5%;
-}
-.modalFormCreateHabit select{
+  }
+  .modalFormCreateHabit select {
     font-size: 2vw;
     padding: 2% 5%;
-}
-.modalBtnCreateHabit {
+  }
+  .modalBtnCreateHabit {
     padding: 3% 0;
     font-size: 2.3vw;
     margin-top: 6%;
-}
-.modalEditHabitBox {
+  }
+  .modalEditHabitBox {
     padding: 5%;
     width: 70%;
-}
-.modalTitleEditHabit {
+  }
+  .modalTitleEditHabit {
     font-size: 4.5vw;
     padding: 3% 0;
-}
-.modalEditHabitBtnExit {
+  }
+  .modalEditHabitBtnExit {
     font-size: 4.5vw;
     width: 5%;
-}
-.modalFormEditHabit label{
+  }
+  .modalFormEditHabit label {
     font-size: 2vw;
     padding: 2% 0;
-}
-.inputNameEditHabit{
+  }
+  .inputNameEditHabit {
     font-size: 2vw;
     padding: 2% 5%;
-}
-.inputDescriptionEditHabit{
+  }
+  .inputDescriptionEditHabit {
     font-size: 2vw;
     padding: 5% 5% 12% 5%;
-}
-.selectCategoryEditHabit {
+  }
+  .selectCategoryEditHabit {
     font-size: 2vw;
     padding: 2% 5%;
-}
-.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+  }
+  .inputNameEditHabitError,
+  .inputDescriptionEditHabitError,
+  .selectCategoryEditHabitError,
+  .inputNameEditProfileError,
+  .inputUrlEditProfileError,
+  .inputNameCreateHabitError,
+  .inputDescriptionCreateHabitError,
+  .selectCategoryCreateHabitError {
     color: red;
     font-size: 2vw;
-}
-.modalStatusEditHabit {
+  }
+  .modalStatusEditHabit {
     font-size: 2.3vw;
     margin: 6% 0 0 0;
-}
-.inputCheckEditHabit {
+  }
+  .inputCheckEditHabit {
     width: 3vw;
     height: 3vh;
     margin: 6% 0 0 0;
-}
-.modalBtnEditCancelHabit {
+  }
+  .modalBtnEditCancelHabit {
     padding: 3% 0;
     font-size: 2.3vw;
-    margin:  6% 1% 0 0 ;
-}
-.modalBtnEditHabit {
+    margin: 6% 1% 0 0;
+  }
+  .modalBtnEditHabit {
     padding: 3% 0;
     font-size: 2.3vw;
     margin: 6% 0 0 1%;
-}
-.modalEditProfileBox {
+  }
+  .modalEditProfileBox {
     padding: 5%;
     width: 70%;
-}
-.modalTitleEditProfile {
+  }
+  .modalTitleEditProfile {
     font-size: 4.5vw;
     padding: 3% 0;
-}
-.modalBtnEditProfileExit {
+  }
+  .modalBtnEditProfileExit {
     font-size: 4.5vw;
     width: 5%;
-}
-.modalFormEditProfile label{
+  }
+  .modalFormEditProfile label {
     font-size: 2vw;
     padding: 2% 0;
-}
-.modalFormEditProfile input{
+  }
+  .modalFormEditProfile input {
     font-size: 2vw;
     padding: 2% 5%;
-}
-.modalBtnEditProfile {
+  }
+  .modalBtnEditProfile {
     padding: 3% 0;
     font-size: 2.3vw;
     margin: 6% 0 0 0;
-}
-.modalDeleteBox {
+  }
+  .modalDeleteBox {
     padding: 5%;
     width: 70%;
-}
-.modalTitleDelete {
+  }
+  .modalTitleDelete {
     font-size: 4.5vw;
     padding: 3% 0;
-}
-.modalDeleteBtnExit {
+  }
+  .modalDeleteBtnExit {
     font-size: 4.5vw;
     width: 5%;
-}
-.modalAlertDelete {
+  }
+  .modalAlertDelete {
     font-size: 2vw;
     padding: 4% 0 2% 0;
-}
-.modalTextDelete {
+  }
+  .modalTextDelete {
     font-size: 2vw;
     padding: 2% 0 4% 0;
-}
-.modalBtnCancel {
+  }
+  .modalBtnCancel {
     padding: 3% 0;
     font-size: 2.3vw;
-    margin:  6% 1% 0 0 ;
-}
-.modalBtnDelete {
+    margin: 6% 1% 0 0;
+  }
+  .modalBtnDelete {
     padding: 3% 0;
     font-size: 2.3vw;
     margin: 6% 0 0 1%;
-}
-.modalChangedSucessImg {
-    width:  30vw;
-}
-.modalCreateSucessImg {
-    width:  30vw;
-}
-.modalLogoutOn {
-    transform: translate(-4%,7%);
-    }
-.modalLogoutBox {
+  }
+  .modalChangedSucessImg {
+    width: 30vw;
+  }
+  .modalCreateSucessImg {
+    width: 30vw;
+  }
+  .modalLogoutOn {
+    transform: translate(-4%, 7%);
+  }
+  .modalLogoutBox {
     width: 20%;
-}
-.modalLogoutBtnEdit {
+  }
+  .modalLogoutBtnEdit {
     padding: 5% 0;
     font-size: 1.9vw;
     border-radius: 0.5vw 0.1vw 0 0;
@@ -1101,288 +1106,297 @@ display: none;
     background-repeat: no-repeat;
     background-size: 2vw;
     background-position: 10% 50%;
-}
-.modalLogoutBtnEdit:hover {
-    background:#F1F3F5 ;
+  }
+  .modalLogoutBtnEdit:hover {
+    background: #f1f3f5;
     background-image: url(../assets/img/userProfile.png);
     background-repeat: no-repeat;
     background-size: 2vw;
     background-position: 10% 50%;
-}
-.modalLogoutBtnLogout {
+  }
+  .modalLogoutBtnLogout {
     padding: 5% 0;
     font-size: 1.9vw;
-    border-radius: 0 0 0.5vw 0.5vw ;
+    border-radius: 0 0 0.5vw 0.5vw;
     background-image: url(../assets/img/leaveLogout.png);
     background-size: 2vw;
     background-repeat: no-repeat;
     background-position: 10% 50%;
-}
-.modalLogoutBtnLogout:hover {
-    background:#F1F3F5 ;
+  }
+  .modalLogoutBtnLogout:hover {
+    background: #f1f3f5;
     background-image: url(../assets/img/leaveLogout.png);
     background-repeat: no-repeat;
     background-size: 2vw;
     background-position: 10% 50%;
+  }
 }
-}
-@media (min-width: 769px){
-    main{
-        padding: 0px 22px;
-    }
+@media (min-width: 769px) {
+  main {
+    padding: 0px 22px;
+  }
 
-    .categoryLabel, .tableBody li span{
-        width: 20%;
-    }
+  .categoryLabel,
+  .tableBody li span {
+    width: 20%;
+  }
 
-    .descLabel, .tableBody li p{
-        display: flex !important;
-        width: 30%;
-        align-items: center;
-
-    }
-.tableBody li p {
+  .descLabel,
+  .tableBody li p {
+    display: flex !important;
+    width: 30%;
+    align-items: center;
+  }
+  .tableBody li p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-    .titleLabel, .tableBody li label{
-        width: 20% !important;
-    }
+  }
+  .titleLabel,
+  .tableBody li label {
+    width: 20% !important;
+  }
 
-    .descLabel{
-        padding-left: 1px;
-    }
-main h2 {
+  .descLabel {
+    padding-left: 1px;
+  }
+  main h2 {
     padding: 0px;
-}
-main nav {
+  }
+  main nav {
     padding: 0px;
-}
-    .taskTable{
-        width: 100%;
-        max-width: 990px;
-        border: 2px solid #a1a1a162;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-    }
+  }
+  .taskTable {
+    width: 100%;
+    max-width: 990px;
+    border: 2px solid #a1a1a162;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  }
 
-    .tableHead{
-        width: 100% !important;
-    }
+  .tableHead {
+    width: 100% !important;
+  }
 
-    .tableBody{
-        width: 100% !important;
-        border-bottom: none;
-    }
+  .tableBody {
+    width: 100% !important;
+    border-bottom: none;
+  }
 
-    .tableBody li{
-        width: 100%;
-    }
-.tableBody li span{
+  .tableBody li {
+    width: 100%;
+  }
+  .tableBody li span {
     display: flex;
     justify-content: center;
     align-items: center;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    color: #415AF3;
+    color: #415af3;
     padding: 3px 12px;
     margin-right: 129px;
     max-width: 80px;
-    background: #D7E4FB;
+    background: #d7e4fb;
     border-radius: 4px;
-}
+  }
 
-    #tableTitle{
-        width: 100%;
-        max-width: 990px;
-    }
+  #tableTitle {
+    width: 100%;
+    max-width: 990px;
+  }
 
-.modalCreateHabitBox {
+  .modalCreateHabitBox {
     padding: 2%;
     width: 32%;
     height: min-content;
-}
-.modalTitleCreateHabit {
+  }
+  .modalTitleCreateHabit {
     font-size: 1.3vw;
-}
-.modalCreateHabitBtnExit {
+  }
+  .modalCreateHabitBtnExit {
     font-size: 1.4vw;
     width: 5%;
-}
-.modalFormCreateHabit label{
+  }
+  .modalFormCreateHabit label {
     font-size: 1vw;
     padding: 2% 0;
-}
-.inputNameCreateHabit{
+  }
+  .inputNameCreateHabit {
     font-size: 1.1vw;
     padding: 2% 5%;
-}
-.inputDescriptionCreateHabit {
+  }
+  .inputDescriptionCreateHabit {
     font-size: 1.1vw;
     width: 100%;
     padding: 2% 5% 12% 5%;
-}
-.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+  }
+  .inputNameEditHabitError,
+  .inputDescriptionEditHabitError,
+  .selectCategoryEditHabitError,
+  .inputNameEditProfileError,
+  .inputUrlEditProfileError,
+  .inputNameCreateHabitError,
+  .inputDescriptionCreateHabitError,
+  .selectCategoryCreateHabitError {
     color: red;
     font-size: 1.1vw;
-}
-.modalFormCreateHabit select{
+  }
+  .modalFormCreateHabit select {
     font-size: 1.1vw;
-    color: #343A40;
+    color: #343a40;
     width: 100%;
     padding: 2% 5%;
-}
-.modalBtnCreateHabit {
+  }
+  .modalBtnCreateHabit {
     padding: 2.2% 0;
     font-size: 1vw;
-}
-.modalEditHabitBox {
+  }
+  .modalEditHabitBox {
     padding: 2%;
     width: 32%;
     height: min-content;
-}
-.modalTitleEditHabit {
+  }
+  .modalTitleEditHabit {
     font-size: 1.3vw;
-}
-.modalEditHabitBtnExit {
+  }
+  .modalEditHabitBtnExit {
     font-size: 1.4vw;
     width: 5%;
-}
-.modalFormEditHabit label{
+  }
+  .modalFormEditHabit label {
     font-size: 1vw;
     padding: 2% 0;
-}
-.inputNameEditHabit{
+  }
+  .inputNameEditHabit {
     font-size: 1.1vw;
     padding: 2% 5%;
-}
-.inputDescriptionEditHabit{
+  }
+  .inputDescriptionEditHabit {
     font-size: 1.1vw;
     padding: 2% 5% 12% 5%;
-}
-.selectCategoryEditHabit {
+  }
+  .selectCategoryEditHabit {
     font-size: 1.1vw;
     padding: 2% 5%;
-}
-.modalStatusEditHabit {
+  }
+  .modalStatusEditHabit {
     font-size: 1vw;
     margin: 6% 0 0 0;
-}
+  }
 
-.inputCheckEditHabit {
+  .inputCheckEditHabit {
     width: 1.25vw;
     height: 1.25vw;
     margin: 6% 0 0 0;
-}
-.modalBtnEditCancelHabit {
+  }
+  .modalBtnEditCancelHabit {
     padding: 3% 0;
     font-size: 1vw;
-    margin:  6% 1% 0 0 ;
-}
-.modalBtnEditHabit {
+    margin: 6% 1% 0 0;
+  }
+  .modalBtnEditHabit {
     padding: 3% 0;
     font-size: 1vw;
     margin: 6% 0 0 1%;
-}
-.modalEditProfileBox {
+  }
+  .modalEditProfileBox {
     padding: 2%;
     width: 32%;
     height: min-content;
-}
-.modalTitleEditProfile {
+  }
+  .modalTitleEditProfile {
     font-size: 1.3vw;
-}
-.modalBtnEditProfileExit {
+  }
+  .modalBtnEditProfileExit {
     font-size: 1.4vw;
     width: 5%;
-}
-.modalFormEditProfile label{
+  }
+  .modalFormEditProfile label {
     font-size: 1vw;
     padding: 2% 0;
-}
-.modalFormEditProfile input{
+  }
+  .modalFormEditProfile input {
     font-size: 1.1vw;
     padding: 2% 5%;
-}
-.modalBtnEditProfile {
+  }
+  .modalBtnEditProfile {
     padding: 3% 0;
     font-size: 1vw;
     margin: 6% 0 0 0%;
-}
-.modalDeleteBox {
+  }
+  .modalDeleteBox {
     padding: 2%;
     width: 32%;
     height: min-content;
-}
-.modalTitleDelete {
+  }
+  .modalTitleDelete {
     font-size: 1.3vw;
-}
-.modalDeleteBtnExit {
+  }
+  .modalDeleteBtnExit {
     font-size: 1.4vw;
     width: 5%;
-}
-.modalAlertDelete {
+  }
+  .modalAlertDelete {
     font-size: 1.1vw;
     padding: 4% 0 2% 0;
-}
-.modalTextDelete {
+  }
+  .modalTextDelete {
     font-size: 1vw;
     padding: 2% 0 4% 0;
-}
-.modalBtnCancel {
+  }
+  .modalBtnCancel {
     padding: 3% 0;
     font-size: 1vw;
-    margin:  6% 1% 0 0 ;
-}
-.modalBtnDelete {
+    margin: 6% 1% 0 0;
+  }
+  .modalBtnDelete {
     padding: 3% 0;
     font-size: 1vw;
     margin: 6% 0 0 1%;
-}
-.modalChangedSucessOn {
+  }
+  .modalChangedSucessOn {
     position: fixed;
     display: flex;
     align-items: flex-end;
     justify-content: end;
     transform: translate(-3%, -3%);
-    background-color: rgba(0, 0, 0, 0);  
-    inset: 0;  
-    z-index: 1; 
-}
-.modalChangedSucessBox {
-        animation: fadeInRight;
-        animation-duration: 0.7s;
-}
-.modalChangedSucessImg {
+    background-color: rgba(0, 0, 0, 0);
+    inset: 0;
+    z-index: 1;
+  }
+  .modalChangedSucessBox {
+    animation: fadeInRight;
+    animation-duration: 0.7s;
+  }
+  .modalChangedSucessImg {
     width: 20vw;
-}
-.modalCreateSucessOn {
+  }
+  .modalCreateSucessOn {
     position: fixed;
     display: flex;
     align-items: flex-end;
     justify-content: end;
     transform: translate(-3%, -3%);
-    background-color: rgba(0, 0, 0, 0);  
-    inset: 0;  
-    z-index: 1; 
-}
-.modalCreateSucessBox {
-        animation: fadeInRight;
-        animation-duration: 0.7s;
-}
-.modalCreateSucessImg {
+    background-color: rgba(0, 0, 0, 0);
+    inset: 0;
+    z-index: 1;
+  }
+  .modalCreateSucessBox {
+    animation: fadeInRight;
+    animation-duration: 0.7s;
+  }
+  .modalCreateSucessImg {
     width: 20vw;
-} 
-.modalLogoutOn {
-    transform: translate(-17.5%,7.8%);
-    }
-.modalLogoutBox {
+  }
+  .modalLogoutOn {
+    transform: translate(-17.5%, 7.8%);
+  }
+  .modalLogoutBox {
     width: 10%;
-}
-.modalLogoutBtnEdit {
+  }
+  .modalLogoutBtnEdit {
     padding: 5% 0;
     font-size: 1vw;
     border-radius: 0.2vw 0.2vw 0 0;
@@ -1390,31 +1404,40 @@ main nav {
     background-repeat: no-repeat;
     background-size: 1vw;
     background-position: 10% 50%;
-}
-.modalLogoutBtnEdit:hover {
-    background:#F1F3F5 ;
+  }
+  .modalLogoutBtnEdit:hover {
+    background: #f1f3f5;
     background-image: url(../assets/img/userProfile.png);
     background-repeat: no-repeat;
     background-size: 1vw;
     background-position: 10% 50%;
-}
-.modalLogoutBtnLogout {
+  }
+  .modalLogoutBtnLogout {
     padding: 5% 0;
     font-size: 1vw;
-    border-radius: 0 0 0.2vw 0.2vw ;
+    border-radius: 0 0 0.2vw 0.2vw;
     background-image: url(../assets/img/leaveLogout.png);
     background-size: 1vw;
     background-repeat: no-repeat;
     background-position: 10% 50%;
-}
-.modalLogoutBtnLogout:hover {
-    background:#F1F3F5 ;
+  }
+  .modalLogoutBtnLogout:hover {
+    background: #f1f3f5;
     background-image: url(../assets/img/leaveLogout.png);
     background-repeat: no-repeat;
     background-size: 1vw;
     background-position: 10% 50%;
+  }
 }
-} 
 .modalCreateHabitOff {
-    display: none;
+  display: none;
+}
+.modalEditHabitOff {
+  display: none;
+}
+.modalLogoutOff {
+  display: none;
+}
+.modalEditProfileOff {
+  display: none;
 }
