@@ -59,7 +59,7 @@ export default class Homepage {
     const pDescription = document.createElement("p");
     const spanCategory = document.createElement("span");
     const btnEdit = document.createElement("button");
-    const imgButton = document.createElement("img");
+    const imgButton = document.createElement("button");
 
     btnEdit.classList.add("editTaskButton");
     inputCheckbox.id = data.habit_id;
@@ -78,7 +78,7 @@ export default class Homepage {
       data.habit_category[0].toUpperCase()
     );
 
-    imgButton.src = "../assets/img/Button Options.png";
+    imgButton.className = "btnTable fa fa-ellipsis-h"
 
     if (data.habit_category === "saude") {
       spanCategory.innerText = "Saúde";
