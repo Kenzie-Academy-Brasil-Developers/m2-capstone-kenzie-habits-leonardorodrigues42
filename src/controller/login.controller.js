@@ -1,19 +1,21 @@
 import Api from "../models/Api.models.js";
 
 const formLogin = document.querySelector(".formLogin");
-const formButton = document.querySelector(".btnLogin");
 const messageErrorEmail = document.querySelector(".messageErrorEmail");
 const messageErrorPassword = document.querySelector(".messageErrorPassword");
 const inputEmail = document.querySelector(".inputEmail");
 const inputPassword = document.querySelector(".inputPassword");
-
-const formElements = [...formLogin.elements];
 export default class Login {
   static async getLogin() {
+    let formElements = [...formLogin.elements];
+
     const objtLogin = {
       email: formElements[0].value,
       password: formElements[1].value,
     };
+
+      await Api.userLogin(objtLogin);
+
     const response = await Api.userLogin(objtLogin);
 
     //Popup de erro para as requisições
@@ -42,9 +44,34 @@ export default class Login {
   }
 
   static login() {
+    const formButton = document.querySelector(".btnLogin");
     formButton.addEventListener("click", async (event) => {
       event.preventDefault();
+
+      const formElements = [...formLogin.elements];
+      const username = formElements[0].value;
+      const password = formElements[1].value;
+  
+      if (username === "") {
+        event.preventDefault();
+        inputEmail.style.border = "1.5px solid red";
+        messageErrorEmail.innerText = "Campo obrigatório";
+        return;
+      } else {
+        inputEmail.style.border = "1.5px solid blue";
+        messageErrorEmail.innerText = "";
+      }
+      if (password === "") {
+        event.preventDefault();
+        inputPassword.style.border = "1.5px solid red";
+        messageErrorPassword.innerText = "Campo obrigatório"
+        return;
+      } else {
+        inputPassword.style.border = "1.5px solid blue";
+        messageErrorPassword.innerText = "";
+      }
       await Login.getLogin();
+      location.replace("./src/views/homepage.views.html");  
     });
   }
 }
