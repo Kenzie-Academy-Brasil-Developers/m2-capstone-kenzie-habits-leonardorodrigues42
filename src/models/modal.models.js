@@ -54,8 +54,10 @@ export default class Modal {
     const modalFormEditProfile = document.createElement("form");
     const labelNameEditProfile = document.createElement("label");
     const inputNameEditProfile = document.createElement("input");
+    const inputNameEditProfileError = document.createElement("span");
     const labelUrlEditProfile = document.createElement("label");
     const inputUrlEditProfile = document.createElement("input");
+    const inputUrlEditProfileError = document.createElement("span");
     const modalEditProfileContentBtn = document.createElement("div");
     const modalBtnEditProfile = document.createElement("button");
 
@@ -74,8 +76,10 @@ export default class Modal {
     modalFormEditProfile.append(
       labelNameEditProfile,
       inputNameEditProfile,
+      inputNameEditProfileError,
       labelUrlEditProfile,
-      inputUrlEditProfile
+      inputUrlEditProfile,
+      inputUrlEditProfileError
     );
     modalEditProfileContentBtn.append(modalBtnEditProfile);
 
@@ -88,8 +92,10 @@ export default class Modal {
     modalFormEditProfile.className = "modalFormEditProfile";
     labelNameEditProfile.className = "labelNameEditProfile";
     inputNameEditProfile.className = "inputNameEditProfile";
+    inputNameEditProfileError.className = "inputNameEditProfileError";
     labelUrlEditProfile.className = "labelUrlEditProfile";
     inputUrlEditProfile.className = "inputUrlEditProfile";
+    inputUrlEditProfileError.className = "inputUrlEditProfileError";
     modalEditProfileContentBtn.className = "modalEditProfileContentBtn";
     modalBtnEditProfile.className = "modalBtnEditProfile";
 
@@ -111,10 +117,13 @@ export default class Modal {
     const modalFormEditHabit = document.createElement("form");
     const labelNameEditHabit = document.createElement("label");
     const inputNameEditHabit = document.createElement("input");
+    const inputNameEditHabitError = document.createElement("span");
     const labelUrlEditHabit = document.createElement("label");
     const inputDescriptionEditHabit = document.createElement("input");
+    const inputDescriptionEditHabitError = document.createElement("span");
     const labelCategoryEditHabit = document.createElement("label");
     const selectCategoryEditHabit = document.createElement("select");
+    const selectCategoryEditHabitError = document.createElement("span");
     const opitionCategoryEditHabitHealth = document.createElement("option");
     const opitionCategoryEditHabitStudies = document.createElement("option");
     const opitionCategoryEditHabitHouse = document.createElement("option");
@@ -144,10 +153,13 @@ export default class Modal {
     modalFormEditHabit.append(
       labelNameEditHabit,
       inputNameEditHabit,
+      inputNameEditHabitError,
       labelUrlEditHabit,
       inputDescriptionEditHabit,
+      inputDescriptionEditHabitError,
       labelCategoryEditHabit,
-      selectCategoryEditHabit
+      selectCategoryEditHabit,
+      selectCategoryEditHabitError
     );
     selectCategoryEditHabit.append(
       opitionCategoryEditHabit,
@@ -171,8 +183,11 @@ export default class Modal {
     modalEditHabitContentInput.className = "modalEditHabitContentInput";
     modalFormEditHabit.className = "modalFormEditHabit";
     inputNameEditHabit.className = "inputNameEditHabit";
+    inputNameEditHabitError.className = "inputNameEditHabitError";
     inputDescriptionEditHabit.className = "inputDescriptionEditHabit";
+    inputDescriptionEditHabitError.className = "inputDescriptionEditHabitError";
     selectCategoryEditHabit.className = "selectCategoryEditHabit";
+    selectCategoryEditHabitError.className = "selectCategoryEditHabitError";
     modalEditHabitContentCheck.className = "modalEditHabitContentCheck";
     modalStatusEditHabit.className = "modalStatusEditHabit";
     inputCheckEditHabit.className = "inputCheckEditHabit";
@@ -214,10 +229,13 @@ export default class Modal {
     const modalFormCreateHabit = document.createElement("form");
     const labelNameCreatetHabit = document.createElement("label");
     const inputNameCreateHabit = document.createElement("input");
+    const inputNameCreateHabitError = document.createElement("span");
     const labelUrlCreateHabit = document.createElement("label");
     const inputDescriptionCreateHabit = document.createElement("input");
+    const inputDescriptionCreateHabitError = document.createElement("span");
     const labelCategoryCreateHabit = document.createElement("label");
     const selectCategoryCreateHabit = document.createElement("select");
+    const selectCategoryCreateHabitError = document.createElement("span");
     const optionCategoryCreateHabit = document.createElement("option");
     const opitionCategoryCreateHabitHealth = document.createElement("option");
     const opitionCategoryCreateHabitStudies = document.createElement("option");
@@ -227,7 +245,38 @@ export default class Modal {
     const modalBtnCreateHabit = document.createElement("button");
 
     modalFormCreateHabit.addEventListener("submit", async (event) => {
-      event.preventDefault();
+      const formElements = [...modalFormCreateHabit.elements];
+      const title = formElements[0].value;
+      const description = formElements[1].value;
+      const category = formElements[2].options[formElements[2].selectedIndex].value;
+      
+      if (title === "") {
+        event.preventDefault();
+        inputNameCreateHabit.style.border = "1.5px solid red";
+        inputNameCreateHabitError.innerText = "Campo obrigatório";
+        return;
+      } else {
+        inputNameCreateHabit.style.border = "1.5px solid blue";
+        inputNameCreateHabitError.innerText = "";
+      }
+      if (description === "") {
+        event.preventDefault();
+        inputDescriptionCreateHabit.style.border = "1.5px solid red";
+        inputDescriptionCreateHabitError.innerText = "Campo obrigatório";
+        return;
+      } else {
+        inputDescriptionCreateHabit.style.border = "1.5px solid blue";
+        inputDescriptionCreateHabitError.innerText = "";
+      }
+      if (category === "Selecionar categoria") {
+        event.preventDefault();
+        selectCategoryCreateHabit.style.border = "1.5px solid red";
+        selectCategoryCreateHabitError.innerText = "Campo obrigatório";
+        return;
+      } else {
+        selectCategoryCreateHabit.style.border = "1.5px solid blue";
+        selectCategoryCreateHabitError.innerText = "";
+      }
       callback(event);
     });
     modalCreateHabitBtnExit.addEventListener("click", () => {
@@ -248,10 +297,13 @@ export default class Modal {
     modalFormCreateHabit.append(
       labelNameCreatetHabit,
       inputNameCreateHabit,
+      inputNameCreateHabitError,
       labelUrlCreateHabit,
       inputDescriptionCreateHabit,
+      inputDescriptionCreateHabitError,
       labelCategoryCreateHabit,
       selectCategoryCreateHabit,
+      selectCategoryCreateHabitError,
       modalBtnCreateHabit
     );
     selectCategoryCreateHabit.append(
@@ -272,8 +324,11 @@ export default class Modal {
     modalCreateHabitContentInput.className = "modalCreateHabitContentInput";
     modalFormCreateHabit.className = "modalFormCreateHabit";
     inputNameCreateHabit.className = "inputNameCreateHabit";
+    inputNameCreateHabitError.className = "inputNameCreateHabitError";
     inputDescriptionCreateHabit.className = "inputDescriptionCreateHabit";
+    inputDescriptionCreateHabitError.className = "inputDescriptionCreateHabitError";
     selectCategoryCreateHabit.className = "selectCategoryCreateHabit";
+    selectCategoryCreateHabitError.className = "selectCategoryCreateHabitError";
     modalBtnCreateHabit.className = "modalBtnCreateHabit";
 
     modalTitleCreateHabit.innerText = "Criar hábito";
