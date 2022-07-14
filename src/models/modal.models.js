@@ -142,6 +142,7 @@ export default class Modal {
     const modalBtnEditHabit = document.createElement("button");
 
     modalFormEditHabit.addEventListener("submit", async (event) => {
+      event.preventDefault();
       callback(event);
     });
 
@@ -154,8 +155,7 @@ export default class Modal {
     modalEditHabitBox.append(
       modalEditHabitContentTitle,
       modalEditHabitContentInput,
-      modalEditHabitContentCheck,
-      modalEditHabitContentBtn
+      modalEditHabitContentCheck
     );
     modalEditHabitContentTitle.append(
       modalTitleEditHabit,
@@ -171,7 +171,10 @@ export default class Modal {
       inputDescriptionEditHabitError,
       labelCategoryEditHabit,
       selectCategoryEditHabit,
-      selectCategoryEditHabitError
+      selectCategoryEditHabitError,
+      modalEditHabitContentCheck,
+      modalBtnEditCancelHabit,
+      modalBtnEditHabit
     );
     selectCategoryEditHabit.append(
       opitionCategoryEditHabit,
@@ -185,7 +188,8 @@ export default class Modal {
       modalStatusEditHabit,
       inputCheckEditHabit
     );
-    modalEditHabitContentBtn.append(modalBtnEditCancelHabit, modalBtnEditHabit);
+
+    modalBtnEditHabit.setAttribute("type", "submit");
 
     modalEditHabit.className = "modalEditHabitOn";
     modalEditHabitBox.className = "modalEditHabitBox";
