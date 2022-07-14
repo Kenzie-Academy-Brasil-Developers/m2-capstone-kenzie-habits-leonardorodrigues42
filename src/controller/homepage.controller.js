@@ -46,8 +46,17 @@ export default class Homepage {
       habit_description: objectValues[1].value,
       habit_category: objectValues[2].value,
     };
-    await Api.createHabit(objectForm);
-    location.reload();
+    const response = await Api.createHabit(objectForm);
+    if (response.habit_id) {
+      Modal.habitCreateSucess().then(() => location.reload());
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: `O campo ${response.message} está vazio!`,
+        showConfirmButton: true,
+      });
+    }
   }
 
   static ul = document.querySelector(".tableBody");
