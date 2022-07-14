@@ -29,12 +29,22 @@ export default class Login {
       inputEmail.style.border = "none";
       inputPassword.style.border = "1.5px solid red";
     } else {
+      localStorage.setItem(
+        "@kenzie-habits:token",
+        JSON.stringify(response.token)
+      );
+      localStorage.setItem(
+        "@kenzie-habits:user",
+        JSON.stringify(response.response)
+      );
       location.replace("./src/views/homepage.views.html");
     }
   }
-}
 
-formButton.addEventListener("click", async (event) => {
-  event.preventDefault();
-  await Login.getLogin();
-});
+  static login() {
+    formButton.addEventListener("click", async (event) => {
+      event.preventDefault();
+      await Login.getLogin();
+    });
+  }
+}

@@ -24,18 +24,23 @@ header img {
 .headerContainer {
     display: flex;
     width: 100%;
-    max-width: 900px;
+    max-width: 990px;
     justify-content: space-between;
+}
+
+.userContainer {
+    width: 990px;
+    display: flex;
+    align-items: center;
 }
 
 #userInformation {
     background-color: #415AF3;
-    height: 21vh;
-    padding: 0px 22px;
+    height: 14vh;
+    padding: 0px 20px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 #userInformation img {
@@ -68,7 +73,7 @@ main {
 
 #tableTitle{
     width: 100%;
-    max-width: 900px;
+    max-width: 990px;
 }
 
 main h2 {
@@ -86,7 +91,7 @@ main nav {
     height: 9vh;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20.5px 0px 20px;
+    padding: 22px;
 }
 
 main nav a {
@@ -94,6 +99,7 @@ main nav a {
     font-size: 16px;
     font-weight: 500;
     color: black
+
 }
 
 main nav a:hover,
@@ -173,6 +179,13 @@ main .taskTable .tableHead h3:first-of-type{
     align-items: flex-end;
     padding-bottom: 3px;
 }
+.tableBody li label {
+    padding-left: 10px;
+    width: 46.66vw;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3px;
+}
 
 .tableBody li span{
     background-color:#D7E4FB;
@@ -206,9 +219,40 @@ main .taskTable .tableHead h3:first-of-type{
     box-sizing: border-box;
     display: none !important;
 }
-.modalCreateHabitOff {
-    display: none;
+.loadMore {
+    background: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 4px;
+    align-items: center;
+    padding: 10px 28px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin: 30px 0px;
 }
+.btnTable {
+    color: #ADB5BD;
+    background-color: #ffffff00;
+    width: 100%;
+    border: none;
+    padding: 5% 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.4vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5vw;
+    margin-top: 6%;
+}
+.btnTable:hover{
+    color: #ADB5BD;
+    background-color: #E9ECEF
+}
+
+
 .modalCreateHabitOn {
     position: fixed;
     display: flex;
@@ -286,6 +330,11 @@ main .taskTable .tableHead h3:first-of-type{
     box-sizing: border-box;
     border: 2px solid #F1F3F5;
 }
+
+.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+    color: red;
+    font-size: 3vw;
+}
 .inputDescriptionCreateHabit {
     background: #F1F3F5;
     border-radius: 0.4vw;
@@ -336,6 +385,8 @@ main .taskTable .tableHead h3:first-of-type{
 .modalBtnCreateHabit:hover {
     background: #4150D2;
     border: 2px solid #4150D2;
+    animation: pulse;
+    animation-duration: 0.7s;
 }
 .modalEditHabitOff {
     display: none;
@@ -486,6 +537,8 @@ main .taskTable .tableHead h3:first-of-type{
 .modalBtnEditCancelHabit:hover {
     background: #E9ECEF;
     border: 2px solid #E9ECEF;
+    animation: pulse;
+    animation-duration: 0.7s;
 }
 .modalBtnEditHabit {
     width: 100%;
@@ -505,6 +558,8 @@ main .taskTable .tableHead h3:first-of-type{
 .modalBtnEditHabit:hover {
     background: #415AF3;
     border: 2px solid #415AF3;
+    animation: pulse;
+    animation-duration: 0.7s;
 }
 .modalEditProfileOff {
     display: none;
@@ -557,7 +612,7 @@ main .taskTable .tableHead h3:first-of-type{
     background: #f1f3f500;
     border-radius: 0.4vw;
 }
-.modalBtnEditProfileExitModal:hover{
+.modalBtnEditProfileExit:hover{
     color: #F03839;
 }
 .modalEditProfileContentText {
@@ -608,6 +663,8 @@ main .taskTable .tableHead h3:first-of-type{
 .modalBtnEditProfile:hover {
     background: #415AF3;
     border: 2px solid #415AF3;
+    animation: pulse;
+    animation-duration: 0.7s;
 } 
 .modalDeleteOff {
     display: none;
@@ -701,6 +758,8 @@ main .taskTable .tableHead h3:first-of-type{
 .modalBtnCancel:hover{
     background: #E9ECEF;
     border: 2px solid #E9ECEF;
+    animation: pulse;
+    animation-duration: 0.7s;
 }
 .modalBtnDelete {
     width: 50%;
@@ -716,6 +775,11 @@ main .taskTable .tableHead h3:first-of-type{
     font-weight: 600;
     font-size: 3vw;
     color: #FFFFFF;
+}
+.modalBtnDelete:hover{
+    background-color: #F03839;
+    animation: pulse;
+    animation-duration: 0.7s;
 }
 .modalChangedSucessOff {
     display: none;
@@ -877,6 +941,7 @@ display: none;
     .titleLabel{
         width: 40.5vw !important; 
     }
+
 .modalCreateHabitBox {
     padding: 5%;
     width: 70%;
@@ -937,6 +1002,10 @@ display: none;
 .selectCategoryEditHabit {
     font-size: 2vw;
     padding: 2% 5%;
+}
+.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+    color: red;
+    font-size: 2vw;
 }
 .modalStatusEditHabit {
     font-size: 2.3vw;
@@ -1070,8 +1139,13 @@ display: none;
         display: flex !important;
         width: 30%;
         align-items: center;
-    }
 
+    }
+.tableBody li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
     .titleLabel, .tableBody li label{
         width: 20% !important;
     }
@@ -1079,10 +1153,15 @@ display: none;
     .descLabel{
         padding-left: 1px;
     }
-
+main h2 {
+    padding: 0px;
+}
+main nav {
+    padding: 0px;
+}
     .taskTable{
         width: 100%;
-        max-width: 900px;
+        max-width: 990px;
         border: 2px solid #a1a1a162;
         display: flex;
         flex-direction: column;
@@ -1101,11 +1180,26 @@ display: none;
     .tableBody li{
         width: 100%;
     }
+.tableBody li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #415AF3;
+    padding: 3px 12px;
+    margin-right: 129px;
+    max-width: 80px;
+    background: #D7E4FB;
+    border-radius: 4px;
+}
 
     #tableTitle{
         width: 100%;
-        max-width: 900px;
+        max-width: 990px;
     }
+
 .modalCreateHabitBox {
     padding: 2%;
     width: 32%;
@@ -1130,6 +1224,10 @@ display: none;
     font-size: 1.1vw;
     width: 100%;
     padding: 2% 5% 12% 5%;
+}
+.inputNameEditHabitError, .inputDescriptionEditHabitError, .selectCategoryEditHabitError, .inputNameEditProfileError, .inputUrlEditProfileError, .inputNameCreateHabitError, .inputDescriptionCreateHabitError, .selectCategoryCreateHabitError {
+    color: red;
+    font-size: 1.1vw;
 }
 .modalFormCreateHabit select{
     font-size: 1.1vw;
@@ -1279,7 +1377,7 @@ display: none;
     width: 20vw;
 } 
 .modalLogoutOn {
-    transform: translate(-1%,7%);
+    transform: translate(-17.5%,7.8%);
     }
 .modalLogoutBox {
     width: 10%;
@@ -1317,3 +1415,6 @@ display: none;
     background-position: 10% 50%;
 }
 } 
+.modalCreateHabitOff {
+    display: none;
+}
