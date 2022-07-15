@@ -1,12 +1,10 @@
-
-header{
-    height: 58px;
-    box-sizing: border-box;
-    padding: 0px 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+header {
+  height: 58px;
+  box-sizing: border-box;
+  padding: 0px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
@@ -24,12 +22,12 @@ header img {
 }
 
 .headerContainer {
-    display: flex;
-    width: 100%;
-    max-width: 990px;
-    justify-content: space-between;
-    animation: fadeInDownBig;
-    animation-duration: 0.4s;
+  display: flex;
+  width: 100%;
+  max-width: 990px;
+  justify-content: space-between;
+  animation: fadeInDownBig;
+  animation-duration: 0.4s;
 }
 
 .userContainer {
@@ -39,31 +37,30 @@ header img {
 }
 
 #userInformation {
-    background-color: #415AF3;
-    height: 14vh;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  background-color: #415af3;
+  height: 14vh;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #userInformation img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid white;
-    animation: fadeInLeft;
-    animation-duration: 1s;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: fadeInLeft;
+  animation-duration: 1s;
 }
 
 #userInformation h2 {
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    padding-left: 18px;
-    animation: fadeInLeft;
-    animation-duration: 0.3s;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  padding-left: 18px;
+  animation: fadeInLeft;
+  animation-duration: 0.3s;
 }
 
 main {
@@ -74,10 +71,9 @@ main {
   animation-duration: 0.5s;
 }
 
-#tableTitle{
-    width: 100%;
-    max-width: 990px;
-    
+#tableTitle {
+  width: 100%;
+  max-width: 990px;
 }
 
 main nav {
@@ -97,8 +93,8 @@ main nav a {
 
 main nav a:hover,
 main nav button,
-header img{
-    cursor: pointer;
+header img {
+  cursor: pointer;
 }
 
 main nav button {
@@ -143,11 +139,6 @@ main .taskTable .tableHead h3:first-of-type {
   width: 80px;
   padding-left: 20px;
 }
-
-.tableBody {
-  border-bottom: 2px solid #a1a1a159;
-}
-
 .tableBody li {
   border-top: 2px solid #a1a1a16a;
   width: 100vw;
@@ -180,25 +171,24 @@ main .taskTable .tableHead h3:first-of-type {
   padding-bottom: 3px;
 }
 
-.tableBody li span{
-    background-color:#D7E4FB;
-    color: #415AF3;
-    border-radius: 4px;
-    justify-content: center;
-    padding: 5px 0px;
+.tableBody li span {
+  background-color: #d7e4fb;
+  color: #415af3;
+  border-radius: 4px;
+  justify-content: center;
+  padding: 5px 0px;
 }
 
 .tableBody li .editTaskButton {
   width: 60px;
   border: none;
-  background-color: white;
   font-size: 20px;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 16px;
 }
-
 
 .categoryLabel,
 .descLabel {
@@ -206,7 +196,7 @@ main .taskTable .tableHead h3:first-of-type {
   display: none !important;
 }
 .tableBody li .editTaskButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .tableBody li p,
@@ -1440,4 +1430,7 @@ main .taskTable .tableHead h3:first-of-type {
 }
 .modalEditProfileOff {
   display: none;
+}
+.inputCheckboxOn {
+  text-decoration: line-through;
 }
