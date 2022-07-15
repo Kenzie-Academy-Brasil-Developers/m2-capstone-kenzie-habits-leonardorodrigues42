@@ -183,16 +183,21 @@ export default class MenuDropDown {
             }
             
         })
+        const btnEdit = document.querySelector(".modalLogoutBtnEdit");
+        const btnLogout = document.querySelector(".modalLogoutBtnLogout");
+        const modalOn = document.querySelector(".modalLogoutOn");
+        this.iconImage.addEventListener("ondblclick", async (e) => {
+          if(modalOn.className == "modalLogoutOn") {
+            modalOn.className = "modalLogoutOff"
+          }else if(modalOn.className == "modalLogoutOn") {
+            modalOn.className = "modalLogoutOff"
+          }
+        })
+      
 
-        function openCloseModal() {
-            const selected = document.querySelector(".modalLogoutOn") 
-            console.log(selected.classList[0])
             
-            
-            
-            
-        }
-
+              
+          
         
         
     }
