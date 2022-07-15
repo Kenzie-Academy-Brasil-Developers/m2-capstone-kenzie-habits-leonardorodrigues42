@@ -56,7 +56,7 @@ export default class EditHabit {
     const btnDeleteHabit = document.querySelector(".modalBtnEditCancelHabit")
     btnDeleteHabit.addEventListener("click", async (e) => {
       e.preventDefault()
-      console.log("funfou")
+
       Modal.delete()
       const btnConfirmeDelite = document.querySelector(".modalBtnDelete")
       console.log(btnConfirmeDelite)
@@ -72,4 +72,6 @@ export default class EditHabit {
 
     }
   }
+   
+        
 
