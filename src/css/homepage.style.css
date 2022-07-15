@@ -854,11 +854,18 @@ main .taskTable .tableHead h3:first-of-type {
 }
 .modalLogoutClip {
   position: relative;
-  top: 1px;
+  display: flex;
+  justify-content: center;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 1px;
   background: #ffffff;
   width: 2vw;
-  height: 1.1vh;
+  height: 2vh;
+  cursor: pointer;
+}
+.modalLogoutClip:hover{
+  
+  background: #e0a3a3;
 }
 .modalLogoutBtnEdit {
   width: 100%;
