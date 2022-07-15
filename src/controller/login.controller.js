@@ -1,4 +1,4 @@
-import Api from "../models/Api.models.js";
+import Api from "../../models/Api.models.js";
 
 
 // const messageErrorEmail = document.querySelector(".messageErrorEmail");

@@ -1,6 +1,6 @@
-import Api from "../models/Api.models.js";
-import Modal from "../models/modal.models.js";
-import UptadeHabit from "../controller/uptadeHabit.controller.js"
+import Api from "../../models/Api.models.js";
+import Modal from "../../models/modal.models.js";
+import UptadeHabit from "./uptadeHabit.controller.js";
 
 const responseUser = await Api.readAll();
 
@@ -66,11 +66,9 @@ export default class Homepage {
 
     inputCheckbox.type = "checkbox";
 
-
-        data.habit_status ?
-            inputCheckbox.checked = true:
-            inputCheckbox.checked = false
-
+    data.habit_status
+      ? (inputCheckbox.checked = true)
+      : (inputCheckbox.checked = false);
 
     labelTitle.innerText = data.habit_title;
     pDescription.innerText = data.habit_description;
@@ -92,7 +90,6 @@ export default class Homepage {
 
     imgButton.className = "btnTable fa fa-ellipsis-h";
 
-
     btnEdit.appendChild(imgButton);
     li.append(inputCheckbox, labelTitle, pDescription, spanCategory, btnEdit);
     this.ul.append(li);
@@ -103,23 +100,21 @@ export default class Homepage {
   static filterHabitsBtn = document.querySelector("#filterDone");
   static showAllBtn = document.querySelector("#filterAll");
 
+  static async setFilterHabitsBtn() {
+    this.filterHabitsBtn.addEventListener("click", async () => {
+      Homepage.dashboardDisplay.innerHTML = "";
 
-  static async setFilterHabitsBtn(){
-      this.filterHabitsBtn.addEventListener('click', async () => {
-        Homepage.dashboardDisplay.innerHTML = ''
+      let filteredHabits = orderedHabits.filter((elem) => {
+        return elem.habit_status === true;
+      });
+      console.log(filteredHabits);
 
-        let filteredHabits = orderedHabits.filter(elem => {
-          return elem.habit_status === true
-        });
-        console.log(filteredHabits)
+      filteredHabits.slice(0, maxHabits).map((element) => {
+        Homepage.renderHabit(element);
+      });
 
-        filteredHabits.slice(0, maxHabits).map(element => {
-            Homepage.renderHabit(element)
-        });
-
-        this.moreHabits(filteredHabits)
-      })
-
+      this.moreHabits(filteredHabits);
+    });
   }
 
   static async moreHabits(data) {
@@ -133,36 +128,37 @@ export default class Homepage {
         Homepage.renderHabit(elem);
       });
 
-      UptadeHabit.uptadeUserHabit()
+      UptadeHabit.uptadeUserHabit();
     });
   }
 
   static async setCompleteHabit() {
-
-      [...document.querySelectorAll('.tableBody li input')].forEach(elem =>{
-          elem.addEventListener('click', async () =>{
-              await Api.completeHabit(elem.id)
-              responseUser.slice(0, maxHabits).forEach(element => {
-                              Homepage.renderHabit(element)
-                            })
-            })
-          })
-      }
+    [...document.querySelectorAll(".tableBody li input")].forEach((elem) => {
+      elem.addEventListener("click", async () => {
+        const res = await Api.completeHabit(elem.id);
+        if (res) {
+         
+          // location.reload();
+        }
+        // responseUser.slice(0, maxHabits).forEach((element) => {
+        // Homepage.renderHabit(element);
+        // });
+      });
+    });
   }
+}
 
 orderedHabits.slice(0, maxHabits).map((elem) => {
   Homepage.renderHabit(elem);
 });
 
+Homepage.moreHabits(orderedHabits);
 
-Homepage.moreHabits(orderedHabits)
+Homepage.showAllBtn.addEventListener("click", () => {
+  Homepage.dashboardDisplay.innerHTML = "";
 
-Homepage.showAllBtn.addEventListener('click', () =>{
-  console.log("dsfd")
-  Homepage.dashboardDisplay.innerHTML = ''
-
-  responseUser.slice(0, maxHabits).forEach(element => {
-        Homepage.renderHabit(element)
+  responseUser.slice(0, maxHabits).forEach((element) => {
+    Homepage.renderHabit(element);
   });
 
   Homepage.setCompleteHabit();
