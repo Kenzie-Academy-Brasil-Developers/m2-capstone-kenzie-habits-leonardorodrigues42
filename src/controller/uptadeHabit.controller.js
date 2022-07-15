@@ -4,7 +4,7 @@ import Modal from "../models/modal.models.js";
 const formEditHabit = document.querySelector(".modalFormEditHabit");
 
 export default class EditHabit {
-
+  
   static async uptadeUserHabit() {
     const btnEditHabit = document.querySelectorAll(".btnTable");
 
@@ -19,7 +19,6 @@ export default class EditHabit {
       })
     })
   }
-
   static async editHabitCard(btnHabitId) {
     const modalFormEditHabit = document.querySelector(".modalFormEditHabit");
     const postId = localStorage.getItem("@kenzie-habits:habit_id");

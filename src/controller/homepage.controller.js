@@ -6,9 +6,7 @@ const responseUser = await Api.readAll();
 
 let maxHabits = 10;
 
-const orderedHabits = responseUser.sort((a, b) => {
-  return b.habit_id - a.habit_id;
-});
+const orderedHabits = responseUser.sort((a, b) => b.habit_id - a.habit_id);
 
 export default class Homepage {
   static getUser = JSON.parse(localStorage.getItem("@kenzie-habits:user"));
