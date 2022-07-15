@@ -13,8 +13,6 @@ Homepage.createHabitCard();
 
 EditHabit.uptadeUserHabit();
 
-EditHabit.editHabitCard();
-
 Homepage.setCompleteHabit();
 
 Homepage.setFilterHabitsBtn();
