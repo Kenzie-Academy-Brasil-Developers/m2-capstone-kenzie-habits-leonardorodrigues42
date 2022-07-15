@@ -184,15 +184,10 @@ export default class MenuDropDown {
             
         })
 
-        function openCloseModal() {
-            const selected = document.querySelector(".modalLogoutOn") 
-            console.log(selected.classList[0])
-            
-            
-            
-            
-        }
 
+            
+              
+          
         
         
     }

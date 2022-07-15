@@ -818,6 +818,9 @@ main .taskTable .tableHead h3:first-of-type {
 .modalCreateSucessImg {
   width: 50vw;
 }
+.modalLogoutOff {
+  display: none;
+}
 .modalLogoutOn {
   position: fixed;
   display: flex;
@@ -834,6 +837,7 @@ main .taskTable .tableHead h3:first-of-type {
   inset: 0;
   z-index: 1;
 }
+
 .modalLogoutBox {
   display: flex;
   display: flex;
