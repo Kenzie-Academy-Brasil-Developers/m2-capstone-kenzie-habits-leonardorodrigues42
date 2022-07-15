@@ -1,5 +1,6 @@
 import Api from "../models/Api.models.js";
 import Modal from "../models/modal.models.js";
+import UptadeHabit from "../controller/uptadeHabit.controller.js"
 
 const responseUser = await Api.readAll();
 
@@ -93,9 +94,6 @@ export default class Homepage {
 
     imgButton.className = "btnTable fa fa-ellipsis-h";
 
-    if (data.habit_category === "saude") {
-      spanCategory.innerText = "Saúde";
-    }
 
     btnEdit.appendChild(imgButton);
     li.append(inputCheckbox, labelTitle, pDescription, spanCategory, btnEdit);
@@ -120,20 +118,24 @@ export default class Homepage {
         filteredHabits.slice(0, maxHabits).map(element => {
             Homepage.renderHabit(element)
         });
+
+        this.moreHabits(filteredHabits)
       })
 
   }
 
-  static async moreHabits() {
+  static async moreHabits(data) {
     const btnMoreHabits = document.querySelector(".loadMore");
 
     btnMoreHabits.addEventListener("click", (event) => {
       event.preventDefault();
       Homepage.ul.innerHTML = "";
       maxHabits += 5;
-      orderedHabits.slice(0, maxHabits).map((elem) => {
+      data.slice(0, maxHabits).map((elem) => {
         Homepage.renderHabit(elem);
       });
+
+      UptadeHabit.uptadeUserHabit()
     });
   }
 
@@ -155,7 +157,7 @@ orderedHabits.slice(0, maxHabits).map((elem) => {
 });
 
 
-Homepage.moreHabits()
+Homepage.moreHabits(orderedHabits)
 
 Homepage.showAllBtn.addEventListener('click', () =>{
   console.log("dsfd")
