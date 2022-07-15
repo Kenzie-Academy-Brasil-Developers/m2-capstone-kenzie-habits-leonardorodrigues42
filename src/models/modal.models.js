@@ -112,7 +112,7 @@ export default class Modal {
     inputUrlEditProfile.placeholder = "Digitar URL";
     modalBtnEditProfile.innerText = "Salvar alterações";
   }
-  static editHabit(callback) {
+  static editHabit() {
     const body = document.querySelector("body");
     const modalEditHabit = document.createElement("div");
     const modalEditHabitBox = document.createElement("div");
@@ -143,10 +143,6 @@ export default class Modal {
     const modalBtnEditCancelHabit = document.createElement("button");
     const modalBtnEditHabit = document.createElement("button");
 
-    modalFormEditHabit.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      callback(event);
-    });
 
     modalBtnEditHabit.addEventListener("click", async (event) => {
       event.preventDefault();
