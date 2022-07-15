@@ -1,9 +1,10 @@
 import Api from "../models/Api.models.js";
 import Modal from "../models/modal.models.js";
 
-const formEditHabit = document.querySelector(".modalFormEditHabit");
+
 
 export default class EditHabit {
+  static formEditHabit = document.querySelector(".modalFormEditHabit");
   static async uptadeUserHabit() {
     const btnEditHabit = document.querySelector(".btnTable");
 
@@ -15,16 +16,14 @@ export default class EditHabit {
   }
 
   static async editHabitCard() {
-    const modalFormEditHabit = document.querySelector(".modalFormEditHabit");
 
-    const newObject = [...modalFormEditHabit.elements];
+    const newObject = [...this.formEditHabit.elements];
 
     const objectForm = {
       habit_title: newObject[0].value,
       habit_description: newObject[1].value,
       habit_category: newObject[2].value,
     };
-    console.log(objectForm);
 
     const postId = localStorage.getItem("@kenzie-habits:habit_id");
 
