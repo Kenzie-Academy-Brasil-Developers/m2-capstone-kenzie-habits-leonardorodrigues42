@@ -27,9 +27,3 @@ Vamos usar o padrão de develop/feat/fix para todas as branchs que forem criadas
 Todos os commits também devem seguir um padrão para melhorar a legibilidade e o histórico de versão do  código. Esse padrão deve ser colocado na mensagem do commit.
 
 Ao descrever a mensagem, você tem liberdade para descrever o que foi feito, mas lembre-se de manter algo não muito longo.
-
-## Descrição das mensagens
-
-**feat: descrição** - Aqui você diz que está colocando algo novo na sua funcionalidade.
-
-**fix: descrição** - Aqui você diz o que consertou na sua funcionalidade, seja um bug ou erro de escrita.
