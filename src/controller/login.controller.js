@@ -16,6 +16,8 @@ export default class Login {
       password: formElements[1].value,
     };
 
+      await Api.userLogin(objtLogin);
+
     const responseLogin = await Api.userLogin(objtLogin);
     if(responseLogin.token){ 
         localStorage.setItem("@kenzie-habits:user",JSON.stringify(responseLogin.response))
@@ -23,6 +25,7 @@ export default class Login {
         location.replace("./src/views/homepage.views.html");
     }
     return responseLogin
+
   }
 
   static async loginVerification() {
@@ -31,26 +34,28 @@ export default class Login {
       event.preventDefault();
       const formElements = [...formLogin.elements];
       const username = formElements[0].value;
-    const password = formElements[1].value;
-    
-    if (username === "") {
-      event.preventDefault();
-      inputEmail.style.border = "1.5px solid red";
-      messageErrorEmail.innerText = "Campo obrigatório";
-      return;
-    } else {
-      inputEmail.style.border = "1.5px solid blue";
-      messageErrorEmail.innerText = "";
-    }
-    if (password === "") {
-      event.preventDefault();
-      inputPassword.style.border = "1.5px solid red";
-      messageErrorPassword.innerText = "Campo obrigatório";
-      return;
-    } else {
-      inputPassword.style.border = "1.5px solid blue";
-      messageErrorPassword.innerText = "";
-    }
-  });
-}
+      const password = formElements[1].value;
+
+      if (username === "") {
+        event.preventDefault();
+        inputEmail.style.border = "1.5px solid red";
+        messageErrorEmail.innerText = "Campo obrigatório";
+        return;
+      } else {
+        inputEmail.style.border = "1.5px solid blue";
+        messageErrorEmail.innerText = "";
+      }
+      if (password === "") {
+        event.preventDefault();
+        inputPassword.style.border = "1.5px solid red";
+        messageErrorPassword.innerText = "Campo obrigatório";
+        return;
+      } else {
+        inputPassword.style.border = "1.5px solid blue";
+        messageErrorPassword.innerText = "";
+      }
+      await Login.getLogin();
+      location.replace("./src/views/homepage.views.html");
+    });
+  }
 }
