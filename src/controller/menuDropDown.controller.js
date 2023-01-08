@@ -183,16 +183,21 @@ export default class MenuDropDown {
             }
             
         })
+        const btnEdit = document.querySelector(".modalLogoutBtnEdit");
+        const btnLogout = document.querySelector(".modalLogoutBtnLogout");
+        const modalOn = document.querySelector(".modalLogoutOn");
+        this.iconImage.addEventListener("ondblclick", async (e) => {
+          if(modalOn.className == "modalLogoutOn") {
+            modalOn.className = "modalLogoutOff"
+          }else if(modalOn.className == "modalLogoutOn") {
+            modalOn.className = "modalLogoutOff"
+          }
+        })
+      
 
-        function openCloseModal() {
-            const selected = document.querySelector(".modalLogoutOn") 
-            console.log(selected.classList[0])
             
-            
-            
-            
-        }
-
+              
+          
         
         
     }
@@ -201,30 +206,3 @@ export default class MenuDropDown {
 
 }
 
-// iconImage.addEventListener("click", async () => {
-
-//     const form = document.querySelector(".modalFormEditProfile")
-//     let formElements = [...form.elements]
-
-//     const user = Homepage.getUser
-//     console.log(user.usr_name)
-//     formElements[0].value = user.usr_name
-//     formElements[1].value = user.usr_image
-
-//     const btnEdit = document.querySelector(".modalBtnEditProfile")
-
-//     btnEdit.addEventListener("click", async () =>{
-//         formElements = [...form.elements]
-
-//         const data = {
-//             usr_name: formElements[0].value,
-//             usr_image: formElements[1].value
-//         }
-
-//         await Api.uptadeProfile(data)
-//         .then((response) => console.log(response))
-//         .catch((err) => console.log(err))
-
-//     })
-
-// })
