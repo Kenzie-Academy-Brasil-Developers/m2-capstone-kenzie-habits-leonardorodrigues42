@@ -35,11 +35,3 @@ Ao descrever a mensagem, você tem liberdade para descrever o que foi feito, mas
 **fix: descrição** - Aqui você diz o que consertou na sua funcionalidade, seja um bug ou erro de escrita.
 
 ## Exemplos
-
-Na branch **feat/modelApi**:
-
-**git commit -m "feat: adicionado rota GET para clientes"**
-
-**git commit -m "fix: corrigido endpoint com link inválido"**
-
-# ⚠️ Outros padrões em breve
