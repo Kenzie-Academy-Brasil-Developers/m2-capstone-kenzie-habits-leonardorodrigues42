@@ -23,5 +23,3 @@ Ao descrever a mensagem, você tem liberdade para descrever o que foi feito, mas
 ## Descrição das mensagens
 
 **feat: descrição** - Aqui você diz que está colocando algo novo na sua funcionalidade.
-
-**fix: descrição** - Aqui você diz o que consertou na sua funcionalidade, seja um bug ou erro de escrita.
