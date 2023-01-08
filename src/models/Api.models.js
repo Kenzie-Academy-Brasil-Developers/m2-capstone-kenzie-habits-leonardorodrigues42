@@ -6,7 +6,7 @@ export default class Api {
     Authorization: `Bearer ${this.token}`,
   };
   static async userLogin(data) {
-    return fetch("https://habits-kenzie.herokuapp.com/api/userLogin", {
+   const response = await fetch("https://habits-kenzie.herokuapp.com/api/userLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -15,6 +15,7 @@ export default class Api {
     })
       .then((res) => res.json())
       .catch((err) => console.error(err));
+      return response
   }
 
   static async uptadeProfile(data) {
@@ -45,8 +46,7 @@ export default class Api {
       headers: this.headers,
     })
       .then((response) => response.json())
-      .then((res) => res)
-      .catch((err) => console.error(err));
+      .catch((err) => console.log(err));
   }
 
   static async readByCategory(habitId) {

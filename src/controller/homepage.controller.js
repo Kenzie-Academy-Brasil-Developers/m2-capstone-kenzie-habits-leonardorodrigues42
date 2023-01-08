@@ -1,13 +1,12 @@
 import Api from "../models/Api.models.js";
 import Modal from "../models/modal.models.js";
+import UptadeHabit from "../controller/uptadeHabit.controller.js";
 
 const responseUser = await Api.readAll();
 
 let maxHabits = 10;
 
-const orderedHabits = responseUser.sort((a, b) => {
-  return b.habit_id - a.habit_id;
-});
+const orderedHabits = responseUser.sort((a, b) => b.habit_id - a.habit_id);
 
 export default class Homepage {
   static getUser = JSON.parse(localStorage.getItem("@kenzie-habits:user"));
@@ -61,20 +60,18 @@ export default class Homepage {
     const btnEdit = document.createElement("button");
     const imgButton = document.createElement("button");
 
+    imgButton.id = data.habit_id;
     btnEdit.classList.add("editTaskButton");
     inputCheckbox.id = data.habit_id;
+    labelTitle.id = `labelId_${data.habit_id}`;
 
     inputCheckbox.type = "checkbox";
 
+    if (data.habit_status) {
+      labelTitle.classList.add("inputCheckboxOn");
+      inputCheckbox.checked = true;
+    }
 
-
-
-
-
-
-        data.habit_status ?
-            inputCheckbox.checked = true:
-            inputCheckbox.checked = false
     labelTitle.innerText = data.habit_title;
     pDescription.innerText = data.habit_description;
     spanCategory.innerText = data.habit_category;
@@ -95,48 +92,72 @@ export default class Homepage {
 
     imgButton.className = "btnTable fa fa-ellipsis-h";
 
-    if (data.habit_category === "saude") {
-      spanCategory.innerText = "Saúde";
-    }
-
-
-
-
-
-
     btnEdit.appendChild(imgButton);
     li.append(inputCheckbox, labelTitle, pDescription, spanCategory, btnEdit);
     this.ul.append(li);
   }
 
-  static dashboardDisplay = document.getElementsByClassName('tableBody')[0]
+  static dashboardDisplay = document.getElementsByClassName("tableBody")[0];
 
-  static filterHabitsBtn = document.querySelector('#filterDone')
-  static showAllBtn = document.querySelector('#filterAll') 
+  static filterHabitsBtn = document.querySelector("#filterDone");
+  static showAllBtn = document.querySelector("#filterAll");
 
-  static async setFilterHabitsBtn(){
-      this.filterHabitsBtn.addEventListener('click', async () => {
-        Homepage.dashboardDisplay.innerHTML = ''
-        
-        let userHabits = await Api.readAll()
+  static async setFilterHabitsBtn() {
+    this.filterHabitsBtn.addEventListener("click", async () => {
+      Homepage.dashboardDisplay.innerHTML = "";
 
-        let filteredHabits = userHabits.filter(elem => {
-          return elem.habit_status === true
-        });
+      let filteredHabits = orderedHabits.filter((elem) => {
+        return elem.habit_status === true;
+      });
 
-        filteredHabits.map(element => {
-            Homepage.renderHabit(element)
-        });
-      })
+      filteredHabits.slice(0, maxHabits).map((element) => {
+        Homepage.renderHabit(element);
+      });
+
+      this.moreHabits(filteredHabits);
+    });
+  }
+
+  static async moreHabits(data) {
+    const btnMoreHabits = document.querySelector(".loadMore");
+
+    btnMoreHabits.addEventListener("click", (event) => {
+      event.preventDefault();
+      Homepage.ul.innerHTML = "";
+      maxHabits += 5;
+      data.slice(0, maxHabits).map((elem) => {
+        Homepage.renderHabit(elem);
+      });
+
+      UptadeHabit.uptadeUserHabit();
+    });
   }
 
   static async setCompleteHabit() {
-      [...document.querySelectorAll('.tableBody li input')].forEach(elem =>{
-          elem.addEventListener('click', async () =>{
-              await Api.completeHabit(elem.id)
-          })
-      })
-    
+    const inputCheck = document.querySelectorAll(".tableBody li input");
+
+    inputCheck.forEach((elem) => {
+      elem.addEventListener("click", async (event) => {
+        event.preventDefault();
+        const labelCheckd = Array.from(
+          document.querySelectorAll(".tableBody li label")
+        );
+
+        const label = labelCheckd.filter((element) => {
+          return element.id.split("_")[1] == elem.id;
+        });
+
+        const labelId = label[0].id;
+
+        const labelFinal = document.querySelector(`#${labelId}`);
+
+        labelFinal.className = "inputCheckboxOn";
+
+        await Api.completeHabit(elem.id);
+
+        location.reload();
+      });
+    });
   }
 }
 
@@ -144,31 +165,14 @@ orderedHabits.slice(0, maxHabits).map((elem) => {
   Homepage.renderHabit(elem);
 });
 
+Homepage.moreHabits(orderedHabits);
 
+Homepage.showAllBtn.addEventListener("click", () => {
+  Homepage.dashboardDisplay.innerHTML = "";
 
-
-
-
-
-Homepage.showAllBtn.addEventListener('click', () =>{
-  Homepage.dashboardDisplay.innerHTML = ''
-
-  responseUser.forEach(element => {
-        Homepage.renderHabit(element)
+  responseUser.slice(0, maxHabits).forEach((element) => {
+    Homepage.renderHabit(element);
   });
 
-  Homepage.setCompleteHabit()
-})
-
-
-const btnMoreHabits = document.querySelector(".loadMore");
-
-btnMoreHabits.addEventListener("click", (event) => {
-  event.preventDefault();
-  Homepage.ul.innerHTML = "";
-  maxHabits += 5;
-  orderedHabits.slice(0, maxHabits).map((elem) => {
-    Homepage.renderHabit(elem);
-  });
+  Homepage.setCompleteHabit();
 });
-

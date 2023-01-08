@@ -1,3 +1,5 @@
+import EditHabit from "../controller/uptadeHabit.controller.js";
+
 export default class Modal {
   static delete() {
     const body = document.querySelector("body");
@@ -42,6 +44,21 @@ export default class Modal {
       "Após executar essa ação não será possível desfazer";
     modalBtnCancel.innerText = "Cancelar";
     modalBtnDelete.innerText = "Sim,excluir esse hábito";
+
+    modalDeleteBtnExit.addEventListener("click", () => {
+      if(modalDelete.className = "modalDeleteOn") {
+        modalDelete.className = "modalDeleteOff";
+      }else if(modalDelete.className = "modalDeleteOff"){
+        modalDelete.className = "modalDeleteOn"
+      }
+    });
+    modalBtnCancel.addEventListener("click", () => {
+      if(modalDelete.className = "modalDeleteOn") {
+        modalDelete.className = "modalDeleteOff";
+      }else if(modalDelete.className = "modalDeleteOff"){
+        modalDelete.className = "modalDeleteOn"
+      }
+    });
   }
   static editProfile() {
     const body = document.querySelector("body");
@@ -61,7 +78,8 @@ export default class Modal {
     const modalEditProfileContentBtn = document.createElement("div");
     const modalBtnEditProfile = document.createElement("button");
 
-    modalBtnEditProfileExit.addEventListener("click", () => {
+    modalBtnEditProfileExit.addEventListener("click", (event) => {
+      event.preventDefault()
       modalEditProfile.classList.add("modalEditProfileOff");
     });
 
@@ -110,7 +128,7 @@ export default class Modal {
     inputUrlEditProfile.placeholder = "Digitar URL";
     modalBtnEditProfile.innerText = "Salvar alterações";
   }
-  static editHabit(callback) {
+  static editHabit() {
     const body = document.querySelector("body");
     const modalEditHabit = document.createElement("div");
     const modalEditHabitBox = document.createElement("div");
@@ -141,21 +159,33 @@ export default class Modal {
     const modalBtnEditCancelHabit = document.createElement("button");
     const modalBtnEditHabit = document.createElement("button");
 
-    modalFormEditHabit.addEventListener("submit", async (event) => {
-      callback(event);
+
+    modalBtnEditHabit.addEventListener("click", async (event) => {
+      event.preventDefault();
+      await EditHabit.editHabitCard();
     });
 
     modalEditHabitBtnExit.addEventListener("click", () => {
-      modalEditHabit.classList.add("modalEditHabitOff");
+      modalEditHabit.className = "modalEditHabitOff";
     });
+
+    
+    modalBtnEditCancelHabit.addEventListener("click", () => {
+      if(modalEditHabit.className = "mmodalEditHabitOn") {
+        modalEditHabit.className = "modalEditHabitOff";
+      }else if(modalEditHabit.className = "modalEditHabitOff"){
+        modalEditHabit.className = "modalEditHabitOn"
+      }
+    });
+
+
 
     body.append(modalEditHabit);
     modalEditHabit.append(modalEditHabitBox);
     modalEditHabitBox.append(
       modalEditHabitContentTitle,
       modalEditHabitContentInput,
-      modalEditHabitContentCheck,
-      modalEditHabitContentBtn
+      modalEditHabitContentCheck
     );
     modalEditHabitContentTitle.append(
       modalTitleEditHabit,
@@ -171,7 +201,10 @@ export default class Modal {
       inputDescriptionEditHabitError,
       labelCategoryEditHabit,
       selectCategoryEditHabit,
-      selectCategoryEditHabitError
+      selectCategoryEditHabitError,
+      modalEditHabitContentCheck,
+      modalBtnEditCancelHabit,
+      modalBtnEditHabit
     );
     selectCategoryEditHabit.append(
       opitionCategoryEditHabit,
@@ -185,7 +218,8 @@ export default class Modal {
       modalStatusEditHabit,
       inputCheckEditHabit
     );
-    modalEditHabitContentBtn.append(modalBtnEditCancelHabit, modalBtnEditHabit);
+
+    modalBtnEditHabit.setAttribute("type", "submit");
 
     modalEditHabit.className = "modalEditHabitOn";
     modalEditHabitBox.className = "modalEditHabitBox";
@@ -398,6 +432,70 @@ export default class Modal {
 
     modalSucessImg.src = ".././assets/img/imgHabitChangedSucess.png";
   }
+  static loginSucess() {
+    const body = document.querySelector("body");
+    const modalSucessOn = document.createElement("div");
+    const modalSucessBox = document.createElement("div");
+    const modalSucessImg = document.createElement("img");
+
+    body.append(modalSucessOn);
+    modalSucessOn.append(modalSucessBox);
+    modalSucessBox.append(modalSucessImg);
+
+    modalSucessOn.className = "modalChangedSucessOn";
+    modalSucessBox.className = "modalChangedSucessBox";
+    modalSucessImg.className = "modalChangedSucessImg";
+
+    modalSucessImg.src = ".././assets/img/imgLoginSucess.png";
+  }
+  static loginError() {
+    const body = document.querySelector("body");
+    const modalSucessOn = document.createElement("div");
+    const modalSucessBox = document.createElement("div");
+    const modalSucessImg = document.createElement("img");
+
+    body.append(modalSucessOn);
+    modalSucessOn.append(modalSucessBox);
+    modalSucessBox.append(modalSucessImg);
+
+    modalSucessOn.className = "modalChangedSucessOn";
+    modalSucessBox.className = "modalChangedSucessBox";
+    modalSucessImg.className = "modalChangedSucessImg";
+
+    modalSucessImg.src = ".././assets/img/imgLoginError.png";
+  }
+  static habitError() {
+    const body = document.querySelector("body");
+    const modalSucessOn = document.createElement("div");
+    const modalSucessBox = document.createElement("div");
+    const modalSucessImg = document.createElement("img");
+
+    body.append(modalSucessOn);
+    modalSucessOn.append(modalSucessBox);
+    modalSucessBox.append(modalSucessImg);
+
+    modalSucessOn.className = "modalChangedSucessOn";
+    modalSucessBox.className = "modalChangedSucessBox";
+    modalSucessImg.className = "modalChangedSucessImg";
+
+    modalSucessImg.src = ".././assets/img/imgHabitError.png";
+  }
+  static profileError() {
+    const body = document.querySelector("body");
+    const modalSucessOn = document.createElement("div");
+    const modalSucessBox = document.createElement("div");
+    const modalSucessImg = document.createElement("img");
+
+    body.append(modalSucessOn);
+    modalSucessOn.append(modalSucessBox);
+    modalSucessBox.append(modalSucessImg);
+
+    modalSucessOn.className = "modalChangedSucessOn";
+    modalSucessBox.className = "modalChangedSucessBox";
+    modalSucessImg.className = "modalChangedSucessImg";
+
+    modalSucessImg.src = ".././assets/img/imgProfileError.png";
+  }
   static logoutIsEditProfile() {
     const body = document.querySelector("body");
     const modalLogoutOn = document.createElement("div");
@@ -425,5 +523,10 @@ export default class Modal {
 
     modalLogoutBtnEdit.innerText = "   Editar perfil";
     modalLogoutBtnLogout.innerText = "  Sair do app";
+
+    modalLogoutClip.addEventListener("click", (event) => {
+      modalLogoutOn.className = "modalLogoutOff" 
+
+    })
   }
 }
