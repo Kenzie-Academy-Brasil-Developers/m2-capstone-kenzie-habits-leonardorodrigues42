@@ -4,10 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/homepage.style.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/homepage.style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
     <title>Homepage</title>
   </head>
-  <body></body>
-  <script src="../scripts/homepage.scripts.js"
+  <body>
+    <header>
+      <div class="headerContainer">
+        <h1>KenzieHabit</h1>
+        <img class="iconImage"  " src="/src/assets/img/user.png" alt="" />
+      </div>
+    </header>
+    <section id="userInformation">
+      <div class="userContainer">
+        <img class="avatarImage" src="/src/assets/img/user.png" alt="" />
+        <h2 class="username">Username</h2>
+      </div>
+    </section>
+    <main>
+      <div id="tableTitle">
+        <h2>Tarefas</h2>
+        <nav>
+          <a id="filterAll">Todos</a>
+          <a id="filterDone">Concluídos</a>
+          <button class="buttonCreateHabit">Criar</button>
+        </nav>
+      </div>
+      <section class="taskTable">
+        <div class="tableHead">
+          <h3 class="statusLabel">Status</h3>
+          <h3 class="titleLabel">Título</h3>
+          <h3 class="descLabel">Descrição</h3>
+          <h3 class="categoryLabel">Categoria</h3>
+          <h3 class="editLabel">Editar</h3>
+        </div>
+        <ul class="tableBody"></ul>
+      </section>
+      <div><button class="loadMore">Carregar Mais</button></div>
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../scripts/homepage.scripts.js"></script>
+  </body>
 </html>
