@@ -41,5 +41,3 @@ Na branch **feat/modelApi**:
 **git commit -m "feat: adicionado rota GET para clientes"**
 
 **git commit -m "fix: corrigido endpoint com link inválido"**
-
-# ⚠️ Outros padrões em breve
